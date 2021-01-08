@@ -22,29 +22,27 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "lint": "eslint ./src/**/*.{ts,tsx}"
   },
+  
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
-
   "prettier": {
     "semi": true,
     "singleQuote": true,
     "printWidth": 120,
     "tabWidth": 4
-},
-
+  },
   "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
       "not op_mini all"
     ],
-
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -52,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "@types/classnames": "^2.2.11"
+    "@types/classnames": "^2.2.11",
+    "eslint": "^7.17.0"
   }
 }
