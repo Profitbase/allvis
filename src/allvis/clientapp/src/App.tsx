@@ -4,6 +4,7 @@ import { AdminShell } from './app/admin/AdminShell';
 import logo from './logo.svg';
 import defaultSlides from "./app/slideShow/sites-slide"
 import Title, {SlideShowShell} from "./app/slideShow/SlideShowShell"
+import { Informationboard } from './app/slideShow/Informationboard';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Title/>
       <main>
       <SlideShowShell slides = {defaultSlides}/>
+      <Informationboard/>
       
     </main>
     
