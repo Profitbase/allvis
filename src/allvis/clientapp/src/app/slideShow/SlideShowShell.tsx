@@ -1,9 +1,10 @@
 import * as React from 'react'
-
+import {Informationboard} from "./Informationboard"
 
 export const Title = () => {
   return (
     <div className="Title">
+      <Informationboard/>
       <h1>ALLVIS</h1>
     </div>
   )
