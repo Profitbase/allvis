@@ -6,11 +6,11 @@ export const SlideShowShell = ({slides}:{[key:string]:any}) => {
     const { length } = slides;
     
     const goToNext = () => {
-      setCurr(curr === length - 1 ? 0 : curr + 1);
+      setCurr(curr === length-1 ? 0 : curr+1);
     }
     
     React.useEffect(() => {
-      setTimeout(goToNext, 3000);
+      setTimeout(goToNext, 4000);
       
     })
     
@@ -26,9 +26,10 @@ export const SlideShowShell = ({slides}:{[key:string]:any}) => {
       
       <h1>{s.title}</h1> 
       <h2>{s.subtitle}</h2>
-      <h2>{s.actionHref1}</h2>
-      <h2>{s.actionHref2}</h2>
-      <h2>{s.actionHref3}</h2>
+      <h2>{s.action1}</h2>
+      <h2>{s.action2}</h2>
+      <h2>{s.action3}</h2>
+
           </div>
           
          {/*  {i === curr && (

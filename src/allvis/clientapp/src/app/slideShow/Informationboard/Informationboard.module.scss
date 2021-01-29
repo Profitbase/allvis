@@ -1,5 +1,5 @@
 .informationboard {
-    background-color: #3d3c8a;
+    background-color:skyblue;
     margin-top: 0;
     width: 20%;
     height: 1000px;
@@ -8,4 +8,15 @@
     font-family: 'Monaco', 'Courier New', monospace;
     display: inline;
     float: left;
+}
+
+.twitterContainer{
+    background-color: blue;
+    top: 2em;
+    left: 0;
+    width: 60%;
+    height: 60%;
+    object-fit:cover;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }

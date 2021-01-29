@@ -1,28 +1,26 @@
-import {TwitterContainer, VG, LinkedIn} from "./content"
+import {TwitterContainer, LinkedIn, VG} from "./content"
 
 
-export default [
+var data = [
     {
-        title: 'Første side!',
+        title: '1',
         subtitle: 'text',
-        actionHref: "hei"
+        action1: "hei"
     },
 
+   
     {
-        title: "Andre side",
+        title: "2",
+        subtitle: "LinkedIn",
+        action2: <LinkedIn/>
+    },
+    {
+        title: "3",
         subtitle: "twitter",
-        actionHref1: <TwitterContainer/>
+        action3: <TwitterContainer/>
     },
     
-    {
-        title: "Tredje side",
-        subtitle: "VG",
-        actionHref2: <VG/>
-    },
-    {
-        title: "fjerde side",
-        subtitle: "LinkedIn",
-        actionHref3: <LinkedIn/>
-    },
   
   ]
+
+export default data;

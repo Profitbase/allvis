@@ -1,16 +1,25 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import React,{useState} from 'react';
+import styles from './Informationboard.module.scss'
+import cx from 'classnames'
 
 
 export const TwitterContainer = () => {
     useEffect(() => {
       const anchor = document.createElement("a");
       anchor.setAttribute("class", "twitter-timeline");
-      anchor.setAttribute("data-theme", "dark");
-      anchor.setAttribute("data-tweet-limit", "2");
-      anchor.setAttribute("data-chrome", "noheader nofooter nborders");
-      anchor.setAttribute("href", "https://twitter.com/profitbase");
+      anchor.setAttribute("data-lang", "no");
+      anchor.setAttribute("width","auto")
+      
+      anchor.setAttribute("data-dnt", "true");
+      anchor.setAttribute("data-theme", "light");
+      anchor.setAttribute("data-tweet-limit", "4");
+      anchor.setAttribute("data-chrome", "nofooter");
+      anchor.setAttribute("data-chrome", "transparent"); 
+      anchor.setAttribute("count", "2");
+      anchor.setAttribute("data-aria-polite","assertive")
+      anchor.setAttribute("href", "https://twitter.com/profitbase?ref_src=twsrc%5Etfw");
       document.getElementsByClassName("twitter-embed")[0].appendChild(anchor);
       const script = document.createElement("script");
       script.setAttribute("src", "https://platform.twitter.com/widgets.js");
@@ -18,7 +27,7 @@ export const TwitterContainer = () => {
     }, []);
   
     return (
-      <section className="twitterContainer">
+      <section className={cx(styles.twitterContainer)}>
         <div className="twitter-embed"></div>
       </section>
     );
@@ -34,7 +43,7 @@ export const LinkedIn = () => {
      </div>
      );
   }
-
+ 
   export const VG = () => {
     const [state,setState]=useState(false);
     let url="https://www.vg.no";
