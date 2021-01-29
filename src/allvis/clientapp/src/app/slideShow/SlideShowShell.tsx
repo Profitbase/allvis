@@ -1,16 +1,5 @@
 import * as React from 'react'
-import {Informationboard} from "./Informationboard"
-
-export const Title = () => {
-  return (
-    <div className="Title">
-      <Informationboard/>
-      <h1>ALLVIS</h1>
-    </div>
-  )
-}
-
-export default Title
+import {Informationboard} from "./Informationboard/Informationboard"
 
 export const SlideShowShell = ({slides}:{[key:string]:any}) => {
     const [curr, setCurr] = React.useState(0);
@@ -33,8 +22,9 @@ export const SlideShowShell = ({slides}:{[key:string]:any}) => {
       {slides.map((s, i) => (
         <div className={i === curr ? "slide active" : "slide"} key={s.title}>
           <div>
-          
-      <h1>{s.title}</h1>
+
+      
+      <h1>{s.title}</h1> 
       <h2>{s.subtitle}</h2>
       <h2>{s.actionHref1}</h2>
       <h2>{s.actionHref2}</h2>

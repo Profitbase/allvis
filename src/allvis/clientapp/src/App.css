@@ -1,92 +1,84 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 body {
-  margin: 0;
+    margin: 0;
 }
 
 .slider {
-  position: relative;
-  height: 80vh;
+    position: relative;
+    height: 80vh;
 }
 
 .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: .3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s ease;
 }
 
-.slide h1, .slide h2 {
-  color: #fff;
-  text-shadow: 2px 2px 1px #000;
-  
+.slide h1,
+.slide h2 {
+    color: #fff;
+    text-shadow: 2px 2px 1px #000;
 }
 
 .slide.active {
-  opacity: 1;
-  transition-duration: .2s;
-  background-color: white;
-  position: absolute;
-  top: 2em;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  margin-top: 1em;
+    opacity: 1;
+    transition-duration: 0.2s;
+    background-color: white;
+    position: absolute;
+    top: 2em;
+    left: 0;
+    width: 100%;
+    float: right;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    margin-top: 1em;
 }
-.Title {
-  opacity: 1;
-  width: 20%;
-  display: flex;
-  justify-content: left;
-  padding: 2em;
-  margin-bottom: 2em;
-  background-color: white;
-  color:black;
-  text-shadow: 2px 2px 1px grey;
-  font-style: italic;
-  font-family: monospace;
+
+main {
+    display: inline;
 }

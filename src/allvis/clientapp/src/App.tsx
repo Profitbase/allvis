@@ -1,20 +1,17 @@
 import React from 'react';
 import './App.css';
 import { AdminShell } from './app/admin/AdminShell';
-import logo from './logo.svg';
 import defaultSlides from "./app/slideShow/sites-slide"
-import Title, {SlideShowShell} from "./app/slideShow/SlideShowShell"
-import { Informationboard } from './app/slideShow/Informationboard';
+import {SlideShowShell} from "./app/slideShow/SlideShowShell"
+import { Informationboard } from './app/slideShow/Informationboard/Informationboard';
 
 function App() {
   return (
     <div className="App">
       {/* <AdminShell /> */}
-      <Title/>
-      <main>
-      <SlideShowShell slides = {defaultSlides}/>
+    <main>
       <Informationboard/>
-      
+      <SlideShowShell slides = {defaultSlides}/>
     </main>
     
    
