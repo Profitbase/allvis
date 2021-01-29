@@ -1,5 +1,9 @@
 import * as React from 'react'
-import {Informationboard} from "./Informationboard/Informationboard"
+import styles from './Informationboard.module.scss'
+
+
+
+
 
 export const SlideShowShell = ({slides}:{[key:string]:any}) => {
     const [curr, setCurr] = React.useState(0);

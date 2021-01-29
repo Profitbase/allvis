@@ -48,7 +48,7 @@ body {
 .slide {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 10em;
     width: 100%;
     height: 100%;
     display: flex;
@@ -70,26 +70,12 @@ body {
     background-color: white;
     position: absolute;
     top: 2em;
-    left: 1em;
-    width: 100%;
+    left: 15em;
+    width: 75%;
     float: right;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: 1;
     margin-top: 1em;
 }
 
-
-.Title {
-  opacity: 1;
-  width: 20%;
-  display: flex;
-  justify-content: left;
-  padding: 2em;
-  margin-bottom: 2em;
-  background-color: white;
-  color:black;
-  text-shadow: 2px 2px 1px grey;
-  font-style: italic;
-  font-family: monospace;
-}

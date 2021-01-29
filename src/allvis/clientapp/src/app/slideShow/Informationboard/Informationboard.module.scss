@@ -1,12 +1,37 @@
 .informationboard {
     background-color:skyblue;
-    margin-top: 0;
-    width: 20%;
-    height: 1000px;
-    padding: 2%;
+    position: absolute;
+    top: 6em;
+    left: 0;
+    width: 15%;
+    height: 100%;
     color: white;
     font-family: 'Monaco', 'Courier New', monospace;
     display: inline;
     float: left;
+    z-index: 1;
+    justify-content: left;
+    opacity: 1;
+ 
 }
+.logo, img{
+    background-color: skyblue;
+    float: left;
+    width: 15%;
+    position: relative;
+    
+ 
+    
 
+}
+.title {
+    background-color: skyblue;
+    color: white;
+    position: absolute;
+    top: 1em;
+    width: 15%;
+    text-shadow: 3px 3px grey;
+    
+  }
+
+  
