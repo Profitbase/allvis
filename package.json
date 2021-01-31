@@ -19,5 +19,8 @@
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.5"
   }
 }
