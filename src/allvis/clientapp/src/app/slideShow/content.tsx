@@ -41,7 +41,7 @@ export const TwitterContainer = () => {
       <tr className={cx(styles.twitterContainer)}>
       
         <div className="twitter-embed"></div>
-        <iframe className="twitter-embed" src="https://platform.twitter.com/widgets.js"></iframe>
+        
 
       </tr>
       
