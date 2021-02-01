@@ -1,24 +1,29 @@
-import {TwitterContainer, LinkedIn, VG} from "./content"
+import {TwitterContainer, LinkedinContainer, FacebookContainer, FacebookEventer} from "./content"
 
 
 var data = [
     {
-        title: '1',
-        subtitle: 'text',
-        action1: "hei"
+        title: "3",
+        subtitle: "twitter",
+        action: <TwitterContainer/>
     },
-
+    {
+        title: '1',
+        subtitle: '',
+        action: <FacebookContainer/>
+    },
+    {
+        title: "Kommende Arrangementer",
+        subtitle: "",
+        action: <FacebookEventer/>
+    },
    
     {
         title: "2",
         subtitle: "LinkedIn",
-        action2: <LinkedIn/>
+        action: <LinkedinContainer/>
     },
-    {
-        title: "3",
-        subtitle: "twitter",
-        action3: <TwitterContainer/>
-    },
+   
     
   
   ]

@@ -1,9 +1,4 @@
 import * as React from 'react'
-import styles from './Informationboard.module.scss'
-
-
-
-
 
 export const SlideShowShell = ({slides}:{[key:string]:any}) => {
     const [curr, setCurr] = React.useState(0);
@@ -14,7 +9,7 @@ export const SlideShowShell = ({slides}:{[key:string]:any}) => {
     }
     
     React.useEffect(() => {
-      setTimeout(goToNext, 4000);
+      setTimeout(goToNext, 8000);
       
     })
     
@@ -26,18 +21,10 @@ export const SlideShowShell = ({slides}:{[key:string]:any}) => {
       {slides.map((s, i) => (
         <div className={i === curr ? "slide active" : "slide"} key={s.title}>
           <div>
-
-      
       <h1>{s.title}</h1> 
       <h2>{s.subtitle}</h2>
-      <h2>{s.action1}</h2>
-      <h2>{s.action2}</h2>
-      <h2>{s.action3}</h2>
-
-          </div>
-          
-         {/*  {i === curr && (
-           )} */}
+      <h2>{s.action}</h2>
+      </div>
         </div>
       ))}
     </section>

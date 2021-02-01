@@ -1,8 +1,8 @@
 .informationboard {
     background-color: #abc5d6;
     position: absolute;
-    top: 6em;
-    left: 0;
+    top: 10em;
+    left: 1em;
     width: 15%;
     height: 100%;
     color: white;
@@ -18,8 +18,9 @@
     background-color: #abc5d6;
     float: left;
     width: 15%;
-    position: relative;
-    
+    position: absolute;
+    left: 1em; 
+    top: 1em;
  
     
 
@@ -28,10 +29,14 @@
     background-color: #abc5d6;
     color: white;
     position: absolute;
-    top: 1em;
-    width: 15%;
+    top: 2em;
+    width: 10%;
     text-shadow: 3px 3px grey;
-    
+    left: 1em; 
+    float: left;
+    border-bottom: 4px solid white;
+    font-style: italic;
+    font-family: 'Monaco', 'Courier New', monospace;
   }
 
   

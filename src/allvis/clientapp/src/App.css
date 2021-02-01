@@ -40,11 +40,13 @@
 }
 body {
     margin: 0;
+    background-color: #abc5d6;
 }
 
 .slider {
     position: relative;
     height: 80vh;
+    
 }
 
 .slide {
@@ -58,18 +60,20 @@ body {
     align-items: center;
     opacity: 0;
     transition: 0.3s ease;
+   
 }
 
 .slide h1,
 .slide h2 {
-    color: #fff;
-    text-shadow: 2px 2px 1px #000;
+  top: 2em;
+  color: #abc5d6;
+    
 }
 
 .slide.active {
     opacity: 1;
     transition-duration: 0.2s;
-    background-color: white;
+    background-color:#abc5d6;
     position: absolute;
     top: 2em;
     left: 15em;
