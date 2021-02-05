@@ -4,26 +4,18 @@ import styles from './Informationboard.module.scss'
 import {Weather} from './Weather'
 import {Lunch} from './Lunch'
 import {DateComponent} from './Date'
+import {TitleAndLogo} from './TitleAndLogo'
 import cx from 'classnames'
 console.log(logo);
-
-function Title() {
-    return (
-      <div >
-        <img className={cx(styles.logo)} src={logo} alt="Logo" />
-        <h1 className={cx(styles.title)}>ALLVIS</h1>
-      </div>
-    )
-  }
- export default Title
 
 export const Informationboard = () => {
     return(
         <div className={cx(styles.informationboard)}>
+            <TitleAndLogo />
             <DateComponent />
             <br />
             <Weather />
-            <p>&amp;</p>
+            <br />
             <Lunch />
         </div>
     )

@@ -1,91 +1,90 @@
-.informationboard{
+.informationboard {
     position: absolute;
     width: 365px;
-    height: 1024px;
+    height: 100vh;
     left: 0px;
     top: 0px;
     background: #032341;
- 
+    text-align: left;
+    font-family: Mukta Vaani;
 }
-.dateinfo{
+.dateinfo {
     position: absolute;
     width: 264px;
     height: 25px;
     left: 89px;
     top: 255px;
-    
     font-family: Mukta Vaani;
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
     line-height: 43px;
-    
-    color: #FFFFFF;
+    left: 1rem;
+    color: #ffffff;
+    text-align: left;
 }
 
-.lunchinfo{
+.lunchinfo {
     position: absolute;
-width: 264px;
-height: 25px;
-left: 89px;
-top: 434px;
+    width: 264px;
+    height: 25px;
+    top: 434px;
 
-font-family: Mukta Vaani;
-font-style: normal;
-font-weight: normal;
-font-size: 26px;
-line-height: 43px;
-
-color: #FFFFFF;
+    font-family: Mukta Vaani;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 43px;
+    left: 1rem;
+    color: #ffffff;
+    text-align: left;
 }
-.weatherinfo{
+
+.weatherinfo {
     position: absolute;
-width: 264px;
-height: 25px;
-left: 89px;
-top: 357px;
+    width: 264px;
+    height: 25px;
+    left: 89px;
+    top: 357px;
 
-font-family: Mukta Vaani;
-font-style: normal;
-font-weight: normal;
-font-size: 26px;
-line-height: 43px;
-
-color: #FFFFFF;
+    font-family: Mukta Vaani;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 43px;
+    left: 1rem;
+    color: #ffffff;
 }
 
-.logo, img{
+.logo,
+img {
     position: absolute;
     z-index: 1;
     width: 342px;
     height: 80px;
     left: 11px;
-    top: 11px;  
+    top: 11px;
     background-color: #032341;
     display: inline;
-    float: left; 
+    float: left;
     mix-blend-mode: lighten;
     border: 1px solid #000000;
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
 }
 .title {
-position: absolute;
-z-index: 1;
-width: 57px;
-height: 43px;
-left: 37px;
-top: 61px;
+    position: absolute;
+    z-index: 1;
+    width: 57px;
+    height: 43px;
+    left: 37px;
+    top: 61px;
 
-font-family: Mukta Vaani;
-font-style: normal;
-font-weight: normal;
-font-size: 26px;
-line-height: 43px;
+    font-family: Mukta Vaani;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 43px;
 
-color: #FFFFFF;
-
-  }
-
-  
+    color: #ffffff;
+}
