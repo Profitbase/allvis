@@ -27,7 +27,7 @@ export const Weather = () => {
 
     return( 
         <div className={cx (styles.weatherinfo)}>
-            <p><i className="wi wi-day-sunny"></i>It is {descriptionWeather} and {tempratureWeather}&#8451; outside.</p>
+            <p><i className="wi wi-day-sunny"></i>{descriptionWeather} & {tempratureWeather}&#8451;</p>
         </div>
     )
 }

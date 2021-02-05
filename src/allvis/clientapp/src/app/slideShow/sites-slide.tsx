@@ -1,4 +1,4 @@
-import {TwitterContainer, LinkedinContainer, FacebookContainer, FacebookEventer} from "./content"
+import {TwitterContainer, FacebookContainer, FacebookEventer} from "./content"
 
 
 var data = [
@@ -21,7 +21,7 @@ var data = [
     {
         title: "2",
         subtitle: "LinkedIn",
-        action: <LinkedinContainer/>
+        action: "hei"
     },
    
     

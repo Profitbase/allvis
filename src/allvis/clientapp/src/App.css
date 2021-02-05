@@ -40,7 +40,7 @@
 }
 body {
     margin: 0;
-    background-color: #abc5d6;
+    background-color: white;
 }
 
 .slider {
@@ -66,17 +66,17 @@ body {
 .slide h1,
 .slide h2 {
   top: 2em;
-  color: white;
+  color: #032341;
     
 }
 
 .slide.active {
     opacity: 1;
     transition-duration: 0.2s;
-    background-color:#abc5d6;
+    background-color: white;
     position: absolute;
     top: 2em;
-    left: 20em;
+    left:25em;
     width: 75%;
     float: right;
     height: 100%;
