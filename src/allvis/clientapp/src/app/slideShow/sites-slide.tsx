@@ -4,8 +4,9 @@ import {TwitterContainer, FacebookContainer, FacebookEventer} from "./content"
 var data = [
     {
         title: "3",
-        subtitle: "twitter",
-        action: <TwitterContainer/>
+        subtitle:"",
+        action: <TwitterContainer/>,
+        
     },
     {
         title: '1',
@@ -21,7 +22,7 @@ var data = [
     {
         title: "2",
         subtitle: "LinkedIn",
-        action: "hei"
+        action: ""
     },
    
     

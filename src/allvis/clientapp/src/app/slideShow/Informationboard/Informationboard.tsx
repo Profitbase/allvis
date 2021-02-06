@@ -1,6 +1,6 @@
 import * as React from 'react'
 import logo from './logo.svg';
-import styles from './Informationboard.module.scss'
+import styles from "./Informationboard.module.scss"
 import {Weather} from './Weather'
 import {Lunch} from './Lunch'
 import {DateComponent} from './Date'

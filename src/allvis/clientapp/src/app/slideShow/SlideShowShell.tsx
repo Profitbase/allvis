@@ -23,7 +23,8 @@ export const SlideShowShell = ({slides}:{[key:string]:any}) => {
           <div>
       <h1>{s.title}</h1> 
       <h2>{s.subtitle}</h2>
-      <h2>{s.action}</h2>
+      <section>{s.action}</section>
+
       </div>
         </div>
       ))}

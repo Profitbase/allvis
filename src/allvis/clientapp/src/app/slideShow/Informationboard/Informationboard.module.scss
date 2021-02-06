@@ -1,24 +1,26 @@
 .informationboard {
     position: absolute;
-    width: 365px;
-    height: 100vh;
-    left: 0px;
-    top: 0px;
+    width: 22.8125rem;
+    height: 140vh;
+    left: 0rem;
+    top: 0rem;
     background: #032341;
     text-align: left;
     font-family: Mukta Vaani;
+    z-index: 2;
+    
 }
 .dateinfo {
     position: absolute;
-    width: 264px;
-    height: 25px;
-    left: 89px;
-    top: 255px;
+    width: 16.5rem;
+    height: 1.5625rem;
+    left: 5.5625rem;
+    top: 15.9375rem;
     font-family: Mukta Vaani;
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
-    line-height: 43px;
+    font-size: 1.625rem;
+    line-height: 2.6875rem;
     left: 1rem;
     color: #ffffff;
     text-align: left;
@@ -26,15 +28,15 @@
 
 .lunchinfo {
     position: absolute;
-    width: 264px;
-    height: 25px;
-    top: 434px;
+    width: 16.5rem;
+    height: 1.5625rem;
+    top: 27.125rem;
 
     font-family: Mukta Vaani;
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
-    line-height: 43px;
+    font-size: 1.625rem;
+    line-height: 2.6875rem;
     left: 1rem;
     color: #ffffff;
     text-align: left;
@@ -42,16 +44,16 @@
 
 .weatherinfo {
     position: absolute;
-    width: 264px;
-    height: 25px;
-    left: 89px;
-    top: 357px;
+    width: 16.5rem;
+    height: 1.5625rem;
+    left: 5.5625rem;
+    top: 22.3125rem;
 
     font-family: Mukta Vaani;
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
-    line-height: 43px;
+    font-size: 1.625rem;
+    line-height: 2.6875rem;;
     left: 1rem;
     color: #ffffff;
 }
@@ -59,32 +61,30 @@
 .logo,
 img {
     position: absolute;
-    z-index: 1;
-    width: 342px;
-    height: 80px;
-    left: 11px;
-    top: 11px;
+    width: 21.375rem;
+    height: 5rem;
+    left: 0.6875rem;
+    top: 0.6875rem;
     background-color: #032341;
     display: inline;
     float: left;
     mix-blend-mode: lighten;
     border: 1px solid #000000;
     box-sizing: border-box;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
 }
 .title {
     position: absolute;
-    z-index: 1;
-    width: 57px;
-    height: 43px;
-    left: 37px;
-    top: 61px;
+    width: 3.5625rem;
+    height: 2.6875rem;
+    left: 2.3125rem;
+    top: 3.8125rem;
 
     font-family: Mukta Vaani;
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
-    line-height: 43px;
+    font-size: 1.625rem;
+    line-height: 2.6875rem;
 
     color: #ffffff;
 }

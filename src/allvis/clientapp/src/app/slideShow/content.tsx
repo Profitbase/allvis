@@ -10,7 +10,7 @@ export const TwitterContainer = () => {
       anchor.setAttribute("data-lang", "no");
       anchor.setAttribute("data-screen-name", "Profitbase");
       anchor.setAttribute("data-dnt", "true");
-      anchor.setAttribute("data-tweet-limit", "4");
+      anchor.setAttribute("data-tweet-limit", "2");
       anchor.setAttribute("data-aria-polite", "assertive");
       anchor.setAttribute("data-chrome", "transperent");
       anchor.setAttribute("href", "https://twitter.com/profitbase");
@@ -26,7 +26,6 @@ export const TwitterContainer = () => {
       <section className={cx(styles.twitterContainer)}>
         <div className="twitter-embed"></div>
       </section>
-      
     );
   };
 
@@ -105,31 +104,6 @@ export const TwitterContainer = () => {
       
     );
   };
-  export const YoutubeContainer = () => {
-    useEffect(() => {
-      const anchor = document.createElement("a");
-      anchor.setAttribute("class", "youtube-timeline");
-      anchor.setAttribute("id", "player");
-      anchor.setAttribute("data-screen-name", "Profitbase");
-      anchor.setAttribute("data-dnt", "true");
-      anchor.setAttribute("data-tweet-limit", "4");
-      anchor.setAttribute("data-aria-polite", "assertive");
-      anchor.setAttribute("data-chrome", "transperent");
-      anchor.setAttribute("href", "");
-      document.getElementsByClassName("youtube-embed")[0].appendChild(anchor);
-      
-      const script = document.createElement("script");
-      script.setAttribute("src", "https://www.youtube.com/iframe_api");
-      
-      document.getElementsByClassName("youtube-embed")[0].appendChild(script);
-    }, []);
 
-    return (
-      <section className={cx(styles.twitterContainer)}>
-        <div className="youtube-embed"></div>
-      </section>
-      
-    );
-  };
 
   
