@@ -7,11 +7,11 @@ export const Weather = () => {
 
     const API_key = "9b8ce979413024c433f966e90356148d"
 
-    const [tempratureWeather, setTempratureWeather] = useState(Number);
-    const [descriptionWeather, setdescriptionWeather] = useState(' ');
-    const [icon, setIcon] = useState('');
-    const [rangeId, setRangeId] = useState(Number);
-
+    const [time, setTime] = useState<number>()
+    const [tempratureWeather, setTempratureWeather] = useState<number>();
+    const [descriptionWeather, setdescriptionWeather] = useState<string>();
+    const [icon, setIcon] = useState<string>();
+    const [rangeId, setRangeId] = useState<number>(0)
     const weatherIcons = {
         Thunderstorm: "wi-thunderstorm",
         Drizzle: "wi-sleet",
@@ -25,7 +25,10 @@ export const Weather = () => {
     useEffect(() => {
         getWeather()
         getWeatherIcon(rangeId)
-    });
+        setInterval(() => {
+            setTime(Date.now())
+        }, 7200000 );
+    }, []);
 
     const getWeather = async () => {
         const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=Stavanger,No&appid=${API_key}`)
@@ -38,7 +41,6 @@ export const Weather = () => {
         setTempratureWeather(temprature)
         setdescriptionWeather(description)
         setRangeId(rangeId)
-        
     }
     
     const getWeatherIcon = (rangeId: number) => {

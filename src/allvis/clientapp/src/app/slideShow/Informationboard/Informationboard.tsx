@@ -5,6 +5,7 @@ import {Weather} from './Weather'
 import {Lunch} from './Lunch'
 import {DateComponent} from './Date'
 import {TitleAndLogo} from './TitleAndLogo'
+
 import cx from 'classnames'
 console.log(logo);
 
@@ -17,6 +18,8 @@ export const Informationboard = () => {
             <Weather />
             <br />
             <Lunch />
+            <br /> 
+            
         </div>
     )
 }
