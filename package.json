@@ -20,6 +20,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-facebook": "^8.1.4",
+    "react-icons": "^4.2.0",
     "weather-icons": "git+https://github.com/erikflowers/weather-icons.git"
   },
   "devDependencies": {

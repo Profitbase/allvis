@@ -3,13 +3,13 @@ import {TwitterContainer, FacebookContainer, FacebookEventer} from "./content"
 
 var data = [
     {
-        title: "3",
+        title: "",
         subtitle:"",
         action: <TwitterContainer/>,
         
     },
     {
-        title: '1',
+        title: '',
         subtitle: '',
         action: <FacebookContainer/>
     },
@@ -20,7 +20,7 @@ var data = [
     },
    
     {
-        title: "2",
+        title: "",
         subtitle: "LinkedIn",
         action: ""
     },

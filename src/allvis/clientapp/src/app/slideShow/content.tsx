@@ -6,14 +6,16 @@ import cx from 'classnames'
 export const TwitterContainer = () => {
     useEffect(() => {
       const anchor = document.createElement("a");
-      anchor.setAttribute("class", "twitter-timeline");
+      anchor.setAttribute("class", "twitter-grid");
       anchor.setAttribute("data-lang", "no");
       anchor.setAttribute("data-screen-name", "Profitbase");
       anchor.setAttribute("data-dnt", "true");
-      anchor.setAttribute("data-tweet-limit", "2");
+      anchor.setAttribute("data-tweet-limit", "4");
       anchor.setAttribute("data-aria-polite", "assertive");
       anchor.setAttribute("data-chrome", "transperent");
-      anchor.setAttribute("href", "https://twitter.com/profitbase");
+      anchor.setAttribute("data-widget-type", "grid");
+      
+      anchor.setAttribute("href", "https://twitter.com/profitbase?ref_src=twsrc%5Etfw");
       document.getElementsByClassName("twitter-embed")[0].appendChild(anchor);
       
       const script = document.createElement("script");
@@ -21,7 +23,7 @@ export const TwitterContainer = () => {
       
       document.getElementsByClassName("twitter-embed")[0].appendChild(script);
     }, []);
-    
+  
     return (
       <section className={cx(styles.twitterContainer)}>
         <div className="twitter-embed"></div>
@@ -105,5 +107,3 @@ export const TwitterContainer = () => {
     );
   };
 
-
-  
