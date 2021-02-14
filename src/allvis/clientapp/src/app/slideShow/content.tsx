@@ -6,18 +6,17 @@ import cx from 'classnames'
 export const TwitterContainer = () => {
     useEffect(() => {
       const anchor = document.createElement("a");
-      anchor.setAttribute("class", "twitter-grid");
+      anchor.setAttribute("class", "twitter-timeline");
       anchor.setAttribute("data-lang", "no");
       anchor.setAttribute("data-screen-name", "Profitbase");
       anchor.setAttribute("data-dnt", "true");
-      anchor.setAttribute("data-tweet-limit", "4");
+      anchor.setAttribute("data-tweet-limit", "1");
       anchor.setAttribute("data-aria-polite", "assertive");
       anchor.setAttribute("data-chrome", "transperent");
-      anchor.setAttribute("data-widget-type", "grid");
+      anchor.setAttribute("data-height", "100");
       
       anchor.setAttribute("href", "https://twitter.com/profitbase?ref_src=twsrc%5Etfw");
       document.getElementsByClassName("twitter-embed")[0].appendChild(anchor);
-      
       const script = document.createElement("script");
       script.setAttribute("src", "https://platform.twitter.com/widgets.js");
       
