@@ -10,9 +10,9 @@ function App() {
     <div className="App">
       {/* <AdminShell /> */}
     <main>
-      <Informationboard/>
+      <div className = "gridApp"><Informationboard/></div>
       <SlideShowShell slides = {defaultSlides}/>
-    </main>
+    </main> 
     
    
 

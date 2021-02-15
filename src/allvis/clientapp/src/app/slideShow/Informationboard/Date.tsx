@@ -15,8 +15,6 @@ export const DateComponent = () => {
             dateBuilder()
         }, 1000);
     }, [])
-
-    
       
     const dateBuilder = () => {
         const event = new Date()
@@ -25,7 +23,6 @@ export const DateComponent = () => {
 
         setDate(event.toLocaleDateString(undefined, date))
         setTime(event.toLocaleTimeString(undefined, time))
-
     }
 
     return(

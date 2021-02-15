@@ -8,7 +8,7 @@ export const Lunch = () => {
 
     return(
     <div className={cx (styles.lunchinfo)}>
-        <p> <ImSpoonKnife /> Chicken</p>
+        <p> <ImSpoonKnife /> Taco</p>
      </div>
     )
 }

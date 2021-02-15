@@ -1,7 +1,14 @@
 .App {
+    display: grid;
+    grid-gap: 1rem;
     text-align: center;
-    
-   
+}
+
+.gridApp {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 7;
 }
 
 .App-logo {
@@ -46,7 +53,6 @@ body {
 .slider {
     position: relative;
     height: 80vh;
-    
 }
 
 .slide {
@@ -60,14 +66,12 @@ body {
     align-items: center;
     opacity: 0;
     transition: 0.3s ease;
-   
 }
 
 .slide h1,
 .slide h2 {
-  top: 2rem;
-  color: #032341;
-    
+    top: 2rem;
+    color: #032341;
 }
 
 .slide.active {
@@ -76,7 +80,7 @@ body {
     background-color: white;
     position: absolute;
     top: 2rem;
-    left:25rem;
+    left: 25rem;
     width: 75%;
     float: right;
     height: 100%;
@@ -84,4 +88,3 @@ body {
     z-index: 1;
     margin-top: 1rem;
 }
-
