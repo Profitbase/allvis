@@ -13,12 +13,14 @@ export const Informationboard = () => {
     return(
         <div className={cx(styles.informationboard)}>
             <TitleAndLogo />
-            <DateComponent />
-            <br />
-            <Weather />
-            <br />
-            <Lunch />
-            <br /> 
+            <div className ={cx(styles.information)}  >
+                <DateComponent />
+                <br />
+                <Weather />
+                <br />
+                <Lunch />
+                <br /> 
+            </div>
             
         </div>
     )

@@ -2,6 +2,7 @@ import styles from './Informationboard.module.scss'
 import cx from 'classnames'
 import { useState, useEffect } from 'react'
 import { FaRegCalendarAlt } from 'react-icons/fa';
+import { AiOutlineClockCircle } from "react-icons/ai";
 
 
 
@@ -30,8 +31,9 @@ export const DateComponent = () => {
         <div className={cx (styles.dateinfo)}>
             <p> <FaRegCalendarAlt /> {date}</p>
         </div>
+        <br />
         <div className={cx (styles.clock)}>
-            <p>{time}</p>
+            <p> <AiOutlineClockCircle /> {time}</p>
         </div>
     </div>
     )
