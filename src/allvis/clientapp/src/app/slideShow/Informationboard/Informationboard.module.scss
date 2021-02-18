@@ -1,6 +1,6 @@
 .informationboard {
     position: absolute;
-    width: 22.8125rem;
+    width: 23rem;
     height: 140vh;
     left: 0rem;
     top: 0rem;
@@ -8,12 +8,13 @@
     text-align: left;
     font-family: Mukta Vaani;
     z-index: 2;
+
 }
 .dateinfo {
     position: absolute;
     width: 19.5rem;
     height: 1.5625rem;
-    top: 12rem;
+    top: 15rem;
     font-family: Mukta Vaani;
     font-style: normal;
     font-weight: normal;
@@ -28,7 +29,7 @@
     position: absolute;
     width: 16.5rem;
     height: 1.5625rem;
-    top: 27rem;
+    top: 30rem;
     font-family: Mukta Vaani;
     font-style: normal;
     font-weight: normal;
@@ -44,7 +45,7 @@
     width: 16.5rem;
     height: 1.5625rem;
     left: 5.5625rem;
-    top: 20rem;
+    top: 25rem;
     font-family: Mukta Vaani;
     font-style: normal;
     font-weight: normal;
@@ -58,7 +59,7 @@
     position: absolute;
     width: 19.5rem;
     height: 1.5625rem;
-    top: 17rem;
+    top: 20rem;
     font-family: Mukta Vaani;
     font-style: normal;
     font-weight: normal;
@@ -90,6 +91,7 @@ img {
     height: 2.6875rem;
     left: 2.3125rem;
     top: 3.8125rem;
+    
 
     font-family: Mukta Vaani;
     font-style: normal;
