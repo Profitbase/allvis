@@ -1,6 +1,7 @@
 import * as React from 'react'
 import cx from 'classnames'
 import styles from './AdminShell.module.scss'
+import {Twitter} from './Twitter'
 
 export const AdminShell = () => {
 
@@ -14,7 +15,7 @@ export const AdminShell = () => {
 
     return(
         <div className={cx(styles.adminShell, styles.padding)}>
-            AdminShell
+            <Twitter />
         </div>
     )
 }

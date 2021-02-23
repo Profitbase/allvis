@@ -16,7 +16,10 @@ namespace allvis.Controllers
     public class WeatherController : ControllerBase
     {
         private readonly HttpClient _client;
+
         private readonly string API_KEY = "9b8ce979413024c433f966e90356148d";
+
+        private readonly string City = "Sandnes";
 
         public WeatherController(IHttpClientFactory clientFactory)
         {
@@ -26,7 +29,7 @@ namespace allvis.Controllers
         [HttpGet]
         public async Task<WeatherDto> Get()
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, $"http://api.openweathermap.org/data/2.5/weather?q=Stavanger,No&appid={API_KEY}");
+            var request = new HttpRequestMessage(HttpMethod.Get, $"http://api.openweathermap.org/data/2.5/weather?q={City},No&appid={API_KEY}");
             var response = await _client.SendAsync(request);
 
             var weather = JsonSerializer.Deserialize<WeatherAPIResponse>(await response.Content.ReadAsStringAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });

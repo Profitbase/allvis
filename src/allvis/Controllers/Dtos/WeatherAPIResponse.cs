@@ -11,7 +11,6 @@ namespace allvis.Controllers.Dtos
         
         public InnerMain Main { get; set; }
 
-        
         public class InnerWeather
         {
             public int Id { get; set; }
