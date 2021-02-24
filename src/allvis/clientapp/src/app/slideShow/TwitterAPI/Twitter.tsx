@@ -27,7 +27,7 @@ export const Twitter = () => {
     
 
     return( 
-        <div className={cx(styles.twitter, styles.padding)}>
+        <div className={cx(styles.twitter, styles.pa)}>
             <p>{tweets?.text}</p>
             <br/>
             <br/>
