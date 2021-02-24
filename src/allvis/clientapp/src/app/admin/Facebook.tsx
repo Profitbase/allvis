@@ -3,29 +3,30 @@ import IFacebookDto from './IFacebookDto';
 import styles from './AdminShell.module.scss'
 import cx from "classnames"
 
+
 export const Facebook = () => {
     
     const [time, setTime] = useState<number>()
-    const [feed, setFeed] = useState<IFacebookDto>()
+    const [tweets, setTweets] = useState<IFacebookDto>()
     
     useEffect(() => {
-        getFeed()
+        getTweets()
         setInterval(() => {
             setTime(Date.now())
-        }, 72000 );
+        }, 7200000 );
     }, []);
 
-
-    const getFeed = async () => {
+    const getTweets = async () => {
         const apiCall = await fetch('api/Facebook')
-        const respons = await apiCall.json();
-        setFeed(respons)
-        console.log(feed)
+        const response = await apiCall.json();
+        setTweets(response)
+        console.log(tweets)
     }
+    
 
     return( 
-        <div className={cx(styles.facebook, styles.padding)}>
-            {feed?.tekst}
+        <div className={cx(styles.twitter, styles.padding)}>
+            {tweets?.tekst}
         </div>
     )
-}
+} 

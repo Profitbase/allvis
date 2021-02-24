@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import ITwitterDto from './ITwitterDto';
-import ReactPlayer from 'react-player'
 import styles from './AdminShell.module.scss'
 import { AiFillTwitterCircle } from "react-icons/ai";
 

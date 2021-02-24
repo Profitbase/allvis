@@ -1,6 +1,6 @@
 import { Twitter} from "../admin/Twitter";
 import { Facebook} from "../admin/Facebook";
-import { FacebookEventer} from "./content"
+import {FacebookEventer} from "./content"
 
 
 var data = [
