@@ -20,7 +20,7 @@ namespace allvis.Controllers
 
         private readonly string CONSUMER_SECRET = "8UR88dNcpVawCc2zypux26k6sTIgJDwVxEW3vip2ivQZaqvcu5";
 
-        private readonly string ACCESS_TOKEN = "1358353224009457664-3sgkRNzyvLCgRF2UBPbzdiuaVHELwT";
+        private readonly string ACCESS_TOKEN = "EAAD8HeVAWZCkBAMdJQmq67x1x0APoBwCsImALhkViu6tQRfdIMR1kq7QbZAMXtZCTL8I5FJpyO3jkUzO3lfULUaCXNo7XZCSEuhhmW7lB7KHvfEyHYT7TqVQMdFMPZAtsdzzESdVhMAZBZA7EZBHj47Bk7wKYAIvLX0YLfs2ecahuvwFLZBL9rQI8qc6osgvS7ZAVq8iZBKZCLmfN49ljkPvabnaAaaG0lV6mpyiDZA5YZBfHmuwypmdG47GNn";
 
         private readonly string ACCESS_TOKEN_SECRET = "xHsomaaxOSIKGf9m92HaZYrWM4tGkSw2Kuj7ukHuwtW3j";
 
@@ -40,7 +40,7 @@ namespace allvis.Controllers
         [HttpGet]
         public async Task<FacebookDataDto> Get()
         {
-            var url = $"https://api.twitter.com/2/users/{COMPANYID}/tweets?expansions=attachments.media_keys&media.fields=preview_image_url,url";
+            var url = $"https://graph.facebook.com/oauth/access_token?client_id=277205330451449&client_secret=c80e7c7fe59d62a7600cfd8e88dace85&grant_type=9f68604c17080473ed56678a123faa1a ";
             var respons = await _client.GetAsync(url);
             _ = respons.Content.ReadAsStringAsync();
 

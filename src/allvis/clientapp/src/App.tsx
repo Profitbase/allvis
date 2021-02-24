@@ -8,9 +8,9 @@ import { Informationboard } from './app/slideShow/Informationboard/Informationbo
 function App() {
   return (
     <div className="App">
-      {/* <AdminShell />  */}
+        
     <main>
-      <div className = "gridApp"><Informationboard/></div>
+     <div className = "gridApp"><Informationboard/></div>
       <SlideShowShell slides = {defaultSlides}/>
     </main>
     
