@@ -15,14 +15,10 @@ export const AdminShell = () => {
      }, [])
 
     return(
-<<<<<<< HEAD
+
         <div className ={cx(styles.twitter)}>
             <Twitter  />
-=======
-        <div className={cx(styles.twitter, styles.facebook, styles.padding)}>
-            <Twitter />
-            <Facebook/>
->>>>>>> b9280c01e5ae721831038d188c13ef45f0551068
+
         </div>
     )
 }
