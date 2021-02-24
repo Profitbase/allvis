@@ -15,9 +15,10 @@ export const AdminShell = () => {
      }, [])
 
     return(
-        <div className={cx(styles.padding)}>
-            
-            
+
+        <div className ={cx(styles.twitter)}>
+            <Twitter  />
+
         </div>
     )
 }

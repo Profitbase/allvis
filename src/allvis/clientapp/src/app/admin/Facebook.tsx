@@ -29,4 +29,4 @@ export const Facebook = () => {
             {tweets?.tekst}
         </div>
     )
-}
+} 
