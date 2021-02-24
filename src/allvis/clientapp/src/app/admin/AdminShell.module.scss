@@ -5,3 +5,31 @@
 .padding {
     padding: 4px;
 }
+
+.twitter{
+    position: absolute;
+    opacity: 1;
+    top: 15rem;
+    left: 10rem;
+    width: 40rem;
+    
+    color: black;
+    float: left;
+    z-index: 1;
+    margin-top: 1rem;
+
+}
+.facebook{
+    position: absolute;
+    opacity: 1;
+    top: 15rem;
+    left: 10rem;
+    width: 40rem;
+    color: white;
+    height: 50rem;
+    background-color: red;
+    float: left;
+    z-index: 1;
+    margin-top: 1rem;
+
+}

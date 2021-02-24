@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import ITwitterDto from './ITwitterDto';
+import styles from './AdminShell.module.scss'
+import cx from "classnames"
 
 export const Twitter = () => {
     
@@ -22,7 +24,7 @@ export const Twitter = () => {
     
 
     return( 
-        <div>
+        <div className={cx(styles.twitter, styles.padding)}>
             {tweets?.text}
         </div>
     )

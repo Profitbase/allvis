@@ -1,17 +1,19 @@
-import {TwitterContainer, FacebookContainer, FacebookEventer} from "./content"
+import { Twitter} from "../admin/Twitter";
+import { Facebook} from "../admin/Facebook";
+import { FacebookEventer} from "./content"
 
 
 var data = [
     {
         title: "",
         subtitle:"",
-        action: <TwitterContainer/>,
+        action: <Twitter/>,
         
     },
     {
         title: '',
         subtitle: '',
-        action: <FacebookContainer/>
+        action: <Facebook/>,
     },
     {
         title: "Kommende Arrangementer",
