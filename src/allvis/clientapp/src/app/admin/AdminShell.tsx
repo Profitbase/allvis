@@ -2,20 +2,27 @@ import * as React from 'react'
 import cx from 'classnames'
 import styles from './AdminShell.module.scss'
 import {Twitter} from './Twitter'
+import { Facebook } from './Facebook'
 
 export const AdminShell = () => {
 
      React.useEffect(() => {
         const loaddata = async() => {
-            const result = await fetch('api/Weather')
+            const result = await fetch('api/Twitter')
             console.log(await result.json())
         }
         loaddata()
      }, [])
 
     return(
+<<<<<<< HEAD
         <div className ={cx(styles.twitter)}>
             <Twitter  />
+=======
+        <div className={cx(styles.twitter, styles.facebook, styles.padding)}>
+            <Twitter />
+            <Facebook/>
+>>>>>>> b9280c01e5ae721831038d188c13ef45f0551068
         </div>
     )
 }

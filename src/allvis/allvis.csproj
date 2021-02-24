@@ -10,16 +10,30 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Apis.Auth" Version="1.50.0" />
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.1" />
-    <PackageReference Include="TweetinviAPI" Version="5.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.3" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.35.0" />
+    <PackageReference Include="Facebook" Version="7.0.6" />
+    <PackageReference Include="FacebookCore" Version="2.1.13" />
+    <PackageReference Include="Microsoft.AspNet.Mvc.Facebook" Version="5.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="AzureSDK2.2DLLs" Version="1.0.0" />
+    <PackageReference Include="Microsoft.NETCore.Windows.ApiSets" Version="1.0.1" />
+    <PackageReference Include="Zstandard.dyn.x64" Version="1.4.0" />
+    <PackageReference Include="chocolatey.lib" Version="0.10.15" />
+    <PackageReference Include="GW2NET.Newtonsoft" Version="1.4.0" />
+    <PackageReference Include="NLog.GelfTarget" Version="4.4.1" />
+    <PackageReference Include="TfsTestAPI" Version="1.0.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.3" />
+    <PackageReference Include="DotNetOpenAuth.AspNet" Version="4.3.4.13329" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
   </ItemGroup>
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
-    <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+    <None Remove="clientapp\src\app\slideShow\content.tsx" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
@@ -40,7 +54,7 @@
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>
       <DistFiles Include="$(SpaRoot)build\**" />
-      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+      <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
         <RelativePath>%(DistFiles.Identity)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
