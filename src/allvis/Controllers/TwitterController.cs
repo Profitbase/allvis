@@ -16,14 +16,6 @@ namespace allvis.Controllers
     {
         private readonly HttpClient _client;
 
-        private readonly string CONSUMER_KEY = "VELCDa29rseuM43h0bMpeRm5Q";
-
-        private readonly string CONSUMER_SECRET = "8UR88dNcpVawCc2zypux26k6sTIgJDwVxEW3vip2ivQZaqvcu5";
-
-        private readonly string ACCESS_TOKEN = "1358353224009457664-3sgkRNzyvLCgRF2UBPbzdiuaVHELwT";
-
-        private readonly string ACCESS_TOKEN_SECRET = "xHsomaaxOSIKGf9m92HaZYrWM4tGkSw2Kuj7ukHuwtW3j";
-
         private readonly string COMPANYID = "28198545";
 
         private  string _bearerToken = "AAAAAAAAAAAAAAAAAAAAAE0tMwEAAAAAI2QW%2FZmImgXvGvH%2BJRGS9pOyE%2FI%3DfX8cXrY5VgD9Ka68WZmogFCM2NWRSu7TwSl9IVLLGAAfw5Qyih";
@@ -49,11 +41,36 @@ namespace allvis.Controllers
 
             return new TwitterDataDto()
             {
-                text = tweets.data.FirstOrDefault().text
+                text = tweets.data[1].text,
+                medium = tweets.includes.media[0].url,
+                type = GetMediaType(tweets.includes.media[0].type)
             };
         }
-      
-  
+
+     
+        private string GetMediaType(string type)
+        {
+            string mediaType;
+
+            if (type == "photo")
+            {
+                mediaType = "photo";
+            }
+            else if (type == "video")
+            {
+                mediaType = "video";
+            }
+            else
+            {
+                mediaType = null;
+            }
+            return mediaType;
+        }
+
+
+
+
+
 
 
     }

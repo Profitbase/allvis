@@ -14,8 +14,8 @@ export const AdminShell = () => {
      }, [])
 
     return(
-        <div className={cx(styles.adminShell, styles.padding)}>
-            <Twitter />
+        <div className ={cx(styles.twitter)}>
+            <Twitter  />
         </div>
     )
 }

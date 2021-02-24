@@ -8,14 +8,14 @@ namespace allvis.Controllers.Dtos
 
     public class TwitterAPIResponse
     {
-        public IEnumerable<Datum> data { get; set; }
+        public List <Datum> data { get; set; }
         public Includes includes { get; set; }
         public Meta meta { get; set; }
     }
 
     public class Includes
     {
-        public Medium[] media { get; set; }
+        public List <Medium> media { get; set; }
     }
 
     public class Medium

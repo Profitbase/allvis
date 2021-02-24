@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
 import ITwitterDto from './ITwitterDto';
+import ReactPlayer from 'react-player'
+import styles from './AdminShell.module.scss'
+import { AiFillTwitterCircle } from "react-icons/ai";
+
 
 export const Twitter = () => {
     
@@ -23,7 +27,13 @@ export const Twitter = () => {
 
     return( 
         <div>
-            {tweets?.text}
+            <p>{tweets?.text}</p>
+            <br/>
+            <br/>
+            <img src = {tweets?.medium} alt= {tweets?.type}/>
+            <h1>
+                <p><AiFillTwitterCircle />This post is from Twitter </p>
+            </h1>
         </div>
     )
 }
