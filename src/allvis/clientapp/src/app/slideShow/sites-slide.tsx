@@ -1,6 +1,6 @@
-import { Twitter} from "../admin/Twitter";
+import { Twitter} from "./TwitterAPI/Twitter";
 import { Facebook} from "../admin/Facebook";
-import {FacebookEventer} from "./content"
+import {FacebookContainer, FacebookEventer} from "./content"
 
 
 var data = [
@@ -13,7 +13,7 @@ var data = [
     {
         title: '',
         subtitle: '',
-        action: <Facebook/>,
+        action: <FacebookContainer/>
     },
     {
         title: "Kommende Arrangementer",

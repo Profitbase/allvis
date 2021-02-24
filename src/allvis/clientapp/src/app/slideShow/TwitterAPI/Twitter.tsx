@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import ITwitterDto from './ITwitterDto';
-import styles from './AdminShell.module.scss'
+import styles from './Twitter.module.scss'
 import { AiFillTwitterCircle } from "react-icons/ai";
+import cx from "classnames"
 
 
 
@@ -26,7 +27,7 @@ export const Twitter = () => {
     
 
     return( 
-        <div>
+        <div className={cx(styles.twitter, styles.padding)}>
             <p>{tweets?.text}</p>
             <br/>
             <br/>
