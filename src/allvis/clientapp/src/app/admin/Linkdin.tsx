@@ -27,7 +27,7 @@ export const Linkdin = () => {
     
 
     return( 
-        <div className={cx(styles.twitter, styles.pa)}>
+        <div className={cx()}>
             <p>{tweets?.text}</p>
            
 

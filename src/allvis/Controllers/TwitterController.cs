@@ -41,7 +41,7 @@ namespace allvis.Controllers
 
             return new TwitterDataDto()
             {
-                text = tweets.data[1].text,
+                text = tweets.data[0].text,
                 medium = tweets.includes.media[0].url,
                 type = GetMediaType(tweets.includes.media[0].type)
             };

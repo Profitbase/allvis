@@ -1,5 +1,5 @@
 .twitter {
-    display: inline-block;
+    position: relative;
     font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Calibri, sans-serif;
     font-size: 12px;
     font-weight: bold;
@@ -9,23 +9,37 @@
     border-style: solid;
     border-width: 1px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-    margin: 10px 5px;
     padding: 0 16px 16px 0;
-    width: 900px;
+    width: 800px;
     opacity: 1;
-    position: absolute;
-    object-fit: cover;
     z-index: 1;
-
+    height:600px;
+    margin-left: 10rem;
+    margin-top: 18rem;
 }
+.Bilde {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    opacity: 1;
+    z-index: 1;
+    margin-top: 6rem;
+    margin-left: 4rem;
+}
+.twitterfig{
 
+    margin-top: 29rem;
+    float: right;
+    font-size: xx-large;
+    display: inline;
+}
 .padding {
     padding: 4px;
 }
 .twitter p {
     font-size: 16px;
     font-weight: normal;
-    line-height: 20px;
+    
 }
 
 .twitter a {
@@ -33,9 +47,6 @@
     font-weight: normal;
     text-decoration: none;
     outline: 0 none;
-}
-.twitter img {
-    width: 900px;
 }
 
 .twitter h1 {

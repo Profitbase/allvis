@@ -16,8 +16,8 @@ namespace allvis.Controllers
     {
         private readonly HttpClient _client;
 
-        private readonly string COMPANYID = "78xaaniius3n35";
-        private readonly string COMPANYSECRET = "nNq2plrBZL2tlWlK";
+        private readonly string clientid = "78xaaniius3n35";
+        private readonly string clientSecret = "nNq2plrBZL2tlWlK";
 
         private string _bearerToken = "AAAAAAAAAAAAAAAAAAAAAE0tMwEAAAAAI2QW%2FZmImgXvGvH%2BJRGS9pOyE%2FI%3DfX8cXrY5VgD9Ka68WZmogFCM2NWRSu7TwSl9IVLLGAAfw5Qyih";
 
@@ -33,12 +33,11 @@ namespace allvis.Controllers
         [HttpGet]
         public async Task<LinkdinDataDto> Get()
         {
-            var url = $"https://api.linkedin.com/v1/companies/{COMPANYID}/updates?format=json";
-            var response = await _client.GetAsync(url);
+            var url = $"https://api.linkedin.com/v2/organizations/{clientid}";
+            var respons = await _client.GetAsync(url);
+            _ = respons.Content.ReadAsStringAsync();
 
-            var res = response.Content.ReadAsStringAsync();
-
-            var tweets = JsonSerializer.Deserialize<LinkdinAPIResponse>(await response.Content.ReadAsStringAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            var tweets = JsonSerializer.Deserialize<LinkdinAPIResponse>(await respons.Content.ReadAsStringAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
             return new LinkdinDataDto()
             {

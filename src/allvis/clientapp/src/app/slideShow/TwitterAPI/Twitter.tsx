@@ -27,15 +27,11 @@ export const Twitter = () => {
     
 
     return( 
-        <div className={cx(styles.twitter, styles.padding)}>
+        <div className={cx(styles.twitter)}>
             <p>{tweets?.text}</p>
-            <br/>
-            <br/>
-            <img src = {tweets?.medium} alt= {tweets?.type}/>
-            <h1>
-                <p><AiFillTwitterCircle />This post is from Twitter </p>
-            </h1>
-
+            <img src={tweets?.medium} className={cx(styles.Bilde)} alt={tweets?.type}/>
+            <p className={cx(styles.twitterfig)}><AiFillTwitterCircle />This post is from Twitter </p>
+        
         </div>
     )
 }
