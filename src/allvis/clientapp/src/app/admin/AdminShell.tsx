@@ -1,8 +1,7 @@
 import * as React from 'react'
 import cx from 'classnames'
-import styles from './AdminShell.module.scss'
 import {Twitter} from '../slideShow/TwitterAPI/Twitter'
-import { Facebook } from './Facebook'
+import {Linkdin}  from './Linkdin'
 
 export const AdminShell = () => {
 
@@ -16,8 +15,8 @@ export const AdminShell = () => {
 
     return(
 
-        <div className ={cx(styles.twitter)}>
-            <Twitter  />
+        <div>
+            <Linkdin/>
 
         </div>
     )

@@ -16,17 +16,9 @@ namespace allvis.Controllers
     {
         private readonly HttpClient _client;
 
-        private readonly string CONSUMER_KEY = "VELCDa29rseuM43h0bMpeRm5Q";
+        private readonly string COMPANYID = "";
 
-        private readonly string CONSUMER_SECRET = "8UR88dNcpVawCc2zypux26k6sTIgJDwVxEW3vip2ivQZaqvcu5";
-
-        private readonly string ACCESS_TOKEN = "EAAD8HeVAWZCkBAMdJQmq67x1x0APoBwCsImALhkViu6tQRfdIMR1kq7QbZAMXtZCTL8I5FJpyO3jkUzO3lfULUaCXNo7XZCSEuhhmW7lB7KHvfEyHYT7TqVQMdFMPZAtsdzzESdVhMAZBZA7EZBHj47Bk7wKYAIvLX0YLfs2ecahuvwFLZBL9rQI8qc6osgvS7ZAVq8iZBKZCLmfN49ljkPvabnaAaaG0lV6mpyiDZA5YZBfHmuwypmdG47GNn";
-
-        private readonly string ACCESS_TOKEN_SECRET = "xHsomaaxOSIKGf9m92HaZYrWM4tGkSw2Kuj7ukHuwtW3j";
-
-        private readonly string COMPANYID = "28198545";
-
-        private string _bearerToken = "AAAAAAAAAAAAAAAAAAAAAE0tMwEAAAAAI2QW%2FZmImgXvGvH%2BJRGS9pOyE%2FI%3DfX8cXrY5VgD9Ka68WZmogFCM2NWRSu7TwSl9IVLLGAAfw5Qyih";
+        private string _bearerToken = "";
 
 
         public FacebookController(IHttpClientFactory clientFactory)
@@ -40,17 +32,43 @@ namespace allvis.Controllers
         [HttpGet]
         public async Task<FacebookDataDto> Get()
         {
-            var url = $"https://graph.facebook.com/oauth/access_token?client_id=277205330451449&client_secret=c80e7c7fe59d62a7600cfd8e88dace85&grant_type=9f68604c17080473ed56678a123faa1a ";
-            var respons = await _client.GetAsync(url);
-            _ = respons.Content.ReadAsStringAsync();
+            var url = $"";
+            var response = await _client.GetAsync(url);
 
-            var feed = JsonSerializer.Deserialize<FacebookAPIResponse>(await respons.Content.ReadAsStringAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            var res = response.Content.ReadAsStringAsync();
+
+            var tweets = JsonSerializer.Deserialize<FacebookAPIResponse>(await response.Content.ReadAsStringAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
             return new FacebookDataDto()
             {
-                Tekst = feed.data.FirstOrDefault().tekst
+                text = tweets.data[1].text,
+                medium = tweets.includes.media[0].url,
+                type = GetMediaType(tweets.includes.media[0].type)
             };
         }
+
+
+        private string GetMediaType(string type)
+        {
+            string mediaType;
+
+            if (type == "photo")
+            {
+                mediaType = "photo";
+            }
+            else if (type == "video")
+            {
+                mediaType = "video";
+            }
+            else
+            {
+                mediaType = null;
+            }
+            return mediaType;
+        }
+
+
+
 
 
 

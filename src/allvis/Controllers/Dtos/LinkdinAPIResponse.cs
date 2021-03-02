@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 namespace allvis.Controllers.Dtos
 {
 
-    public class FacebookAPIResponse
+    public class LinkdinAPIResponse
     {
-        public List<FacebookDatum> data { get; set; }
-        public FacebookIncludes includes { get; set; }
-        public FacebookMeta meta { get; set; }
+        public List<LinkdinDatum> data { get; set; }
+        public LinkdinIncludes includes { get; set; }
+        public LinkdinMeta meta { get; set; }
     }
 
-    public class FacebookIncludes
+    public class LinkdinIncludes
     {
-        public List<FacebookMedium> media { get; set; }
+        public List<LinkdinMedium> media { get; set; }
     }
 
-    public class FacebookMedium
+    public class LinkdinMedium
     {
         public string media_key { get; set; }
         public string type { get; set; }
@@ -26,7 +26,7 @@ namespace allvis.Controllers.Dtos
         public string preview_image_url { get; set; }
     }
 
-    public class FacebookMeta
+    public class LinkdinMeta
     {
         public string oldest_id { get; set; }
         public string newest_id { get; set; }
@@ -34,14 +34,14 @@ namespace allvis.Controllers.Dtos
         public string next_token { get; set; }
     }
 
-    public class FacebookDatum
+    public class LinkdinDatum
     {
         public string id { get; set; }
         public string text { get; set; }
-        public FacebookAttachments attachments { get; set; }
+        public LinkdinAttachments attachments { get; set; }
     }
 
-    public class FacebookAttachments
+    public class LinkdinAttachments
     {
         public string[] media_keys { get; set; }
     }

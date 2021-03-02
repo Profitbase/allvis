@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace allvis.Controllers.Dtos
 {
-    public class FacebookDataDto
+    public class LinkdinDataDto
     {
         public string text { get; set; }
         public string medium { get; set; }
