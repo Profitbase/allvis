@@ -5,15 +5,16 @@ import {Linkdin} from "../admin/Linkdin"
 var data = [
     {
         title: "",
+        subtitle: "LinkedIn",
+        action: <Linkdin/>
+    },
+    {
+        title: "",
         subtitle:"",
         action: <Twitter/>,
         
     },
-    {
-        title: "",
-        subtitle: "LinkedIn",
-        action: <Linkdin/>
-    },
+   
    
     
     {

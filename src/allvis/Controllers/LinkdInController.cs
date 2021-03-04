@@ -1,5 +1,6 @@
 ﻿using allvis.Controllers.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -15,12 +16,11 @@ namespace allvis.Controllers
     public class LinkdinController : ControllerBase
     {
         private readonly HttpClient _client;
-
         private readonly string clientid = "78xaaniius3n35";
         private readonly string clientSecret = "nNq2plrBZL2tlWlK";
 
-        private string _bearerToken = "AAAAAAAAAAAAAAAAAAAAAE0tMwEAAAAAI2QW%2FZmImgXvGvH%2BJRGS9pOyE%2FI%3DfX8cXrY5VgD9Ka68WZmogFCM2NWRSu7TwSl9IVLLGAAfw5Qyih";
-
+        private string _bearerToken = "AQWGtmLnbn18f_7poA-zwFNCVBerHPNBBfz64qEJIlUS9u2H0cCP9XYbPdHJ4z4i4VBQblcbI53q07j63UxT-JNkttZHLAXO0F0oYKP6olEAM1ChyYKgR5IwTR2zcO_KHKFJ1WdJPK062_3WJv03ExrrwNdW8daMLq5prEVP7q1GF4QAAtUpAyz5UsxXKiR2xMkdOtABG537SFsmHrGJgMj0h5IihnvdcPMI7AygRwgcX2vUe6fSxmC_3supLMw8SWppnPoZyuC45qBZlTxkAglnSNQrwtyNlzMPiyvPcjx1cvFHIFY6xHr1k14pJTKpRDZG4Bh4soC_jL-fQHfhPqInSbMZSA";
+        
 
         public LinkdinController(IHttpClientFactory clientFactory)
         {
@@ -41,7 +41,7 @@ namespace allvis.Controllers
 
             return new LinkdinDataDto()
             {
-                text = tweets.data[1].text,
+                text = tweets.data[0].text,
                 medium = tweets.includes.media[0].url,
                 type = GetMediaType(tweets.includes.media[0].type)
             };
