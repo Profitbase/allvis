@@ -13,11 +13,6 @@ function App() {
       <AdminShell />
     </main>
     
-<<<<<<< HEAD
-=======
-  
-
->>>>>>> 1836a3e3b03c8736ff6104352e7c576cadc61f2f
     </div>
   );
 }
