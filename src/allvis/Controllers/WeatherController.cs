@@ -36,7 +36,7 @@ namespace allvis.Controllers
 
             return new WeatherDto()
             {
-                Description = weather.Weather.FirstOrDefault().Description,
+                Description = GetUppercase(weather.Weather.FirstOrDefault().Description) ,
                 Temperature = (int)(weather.Main.Temp - 273.15),
                 Icon = GetIconName(weather.Weather.FirstOrDefault().Id)
             };
@@ -77,5 +77,15 @@ namespace allvis.Controllers
 
             return iconName;
         }
+    
+
+        private static string GetUppercase(string description)
+        {  
+            return char.ToUpper(description[0]) + description.Substring(1);
+        }
     }
+
+
 }
+
+

@@ -9,7 +9,7 @@ import cx from "classnames"
 export const Twitter = () => {
     
     const [time, setTime] = useState<number>()
-    const [tweets, setTweets] = useState<ITwitterDto>()
+    const [tweets, setTweets] = useState<ITwitterDto []>([])
     
     useEffect(() => {
         getTweets()
@@ -22,20 +22,21 @@ export const Twitter = () => {
         const apiCall = await fetch('api/Twitter')
         const response = await apiCall.json();
         setTweets(response)
-        console.log(tweets)
+        console.log(response)
     }
     
 
-    return( 
-        <div className={cx(styles.twitter, styles.pa)}>
-            <p>{tweets?.text}</p>
-            <br/>
-            <br/>
-            <img src = {tweets?.medium} alt= {tweets?.type}/>
-            <h1>
-                <p><AiFillTwitterCircle />This post is from Twitter </p>
-            </h1>
+    return(
+    <ol>
+        {tweets.map(tweet => (
+            <div className={cx(styles.twitter, styles.pa)}>
+                <p>{tweet.text}</p>
+                <p><img src= {tweet.medium} alt = "" /></p>
+                <h1><p><AiFillTwitterCircle />This post is from Twitter </p></h1>
+            </div>
+        ))}
 
-        </div>
+    </ol>
+
     )
 }

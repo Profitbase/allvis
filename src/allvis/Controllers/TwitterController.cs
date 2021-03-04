@@ -1,5 +1,6 @@
 ﻿using allvis.Controllers.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -20,6 +21,8 @@ namespace allvis.Controllers
 
         private  string _bearerToken = "AAAAAAAAAAAAAAAAAAAAAE0tMwEAAAAAI2QW%2FZmImgXvGvH%2BJRGS9pOyE%2FI%3DfX8cXrY5VgD9Ka68WZmogFCM2NWRSu7TwSl9IVLLGAAfw5Qyih";
 
+        private int _amountOfTweets = 3;
+
 
         public TwitterController(IHttpClientFactory clientFactory)
         {
@@ -30,47 +33,49 @@ namespace allvis.Controllers
 
         // GET: api/<TwitterAPI>
         [HttpGet]
-        public async Task<TwitterDataDto> Get()
+        public async Task<List <TwitterDataDto>> Get()
         {
             var url = $"https://api.twitter.com/2/users/{COMPANYID}/tweets?expansions=attachments.media_keys&media.fields=preview_image_url,url";
             var response = await _client.GetAsync(url);
-
-            var res = response.Content.ReadAsStringAsync();
-
-            var tweets = JsonSerializer.Deserialize<TwitterAPIResponse>(await response.Content.ReadAsStringAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-
-            return new TwitterDataDto()
+            try
             {
-                text = tweets.data[1].text,
-                medium = tweets.includes.media[0].url,
-                type = GetMediaType(tweets.includes.media[0].type)
-            };
+                var twitter = await response.Content.ReadAsStringAsync();
+                var tweets = JsonSerializer.Deserialize<TwitterAPIResponse>( twitter, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                var tweetlist = new List <TwitterDataDto>();
+
+                for (int i = 0; i < _amountOfTweets; i++)
+                {
+                    if (tweets.data[i].attachments == null)
+                    {
+                        tweetlist.Add(new TwitterDataDto { text = tweets.data[i].text, medium = null });
+                    }
+                    else
+                    {
+                        tweetlist.Add(new TwitterDataDto
+                        {
+                            text = tweets.data[i].text,
+                            medium = tweets.includes.media.Where(t => tweets.data[i].attachments.media_keys.Contains(t.media_key)).Select(m => m.url).ToList(),
+                        });
+
+                    };
+                }
+                foreach(var tweet in tweetlist)
+                {
+
+                }
+
+
+                return tweetlist;
+                
+            }
+            catch (System.Exception ex) 
+            {
+
+                throw;
+            }
+
+          
         }
-
-     
-        private string GetMediaType(string type)
-        {
-            string mediaType;
-
-            if (type == "photo")
-            {
-                mediaType = "photo";
-            }
-            else if (type == "video")
-            {
-                mediaType = "video";
-            }
-            else
-            {
-                mediaType = null;
-            }
-            return mediaType;
-        }
-
-
-
-
-
 
 
     }

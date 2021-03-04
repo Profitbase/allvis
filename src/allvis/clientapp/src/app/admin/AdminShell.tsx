@@ -2,7 +2,6 @@ import * as React from 'react'
 import cx from 'classnames'
 import styles from './AdminShell.module.scss'
 import {Twitter} from '../slideShow/TwitterAPI/Twitter'
-import { Facebook } from './Facebook'
 
 export const AdminShell = () => {
 

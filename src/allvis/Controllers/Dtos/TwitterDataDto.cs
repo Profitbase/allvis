@@ -8,8 +8,6 @@ namespace allvis.Controllers.Dtos
     public class TwitterDataDto
     {
         public string text { get; set; }
-        public string medium { get; set; }
-        public string type { get; set; }
-
+        public List<string> medium { get; set; }
     }
 }

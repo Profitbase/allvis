@@ -25,7 +25,7 @@ export const Weather = () => {
 
     return( 
         <div className={cx (styles.weatherinfo)}>
-            <p><i className={`wi ${weather?.icon}`}></i>  {weather?.description}, {weather?.temperature}&#8451;</p>
+            <p><i className={`wi ${weather?.icon}`}></i>  {weather?.description} &amp; {weather?.temperature}&#8451;</p>
         </div>
     )
 }
