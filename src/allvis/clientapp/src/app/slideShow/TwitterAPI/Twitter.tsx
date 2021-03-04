@@ -26,6 +26,7 @@ export const Twitter = () => {
     }
     
 
+<<<<<<< HEAD
     return(
     <ol>
         {tweets.map(tweet => (
@@ -37,6 +38,17 @@ export const Twitter = () => {
         ))}
 
     </ol>
+=======
+    return( 
+        <div className={cx(styles.twitter, styles.padding)}>
+            <p>{tweets?.text}</p>
+            <br/>
+            <br/>
+            <img src = {tweets?.medium} alt= {tweets?.type}/>
+            <h1>
+                <p><AiFillTwitterCircle />This post is from Twitter </p>
+            </h1>
+>>>>>>> 1836a3e3b03c8736ff6104352e7c576cadc61f2f
 
     )
 }

@@ -1,9 +1,14 @@
 import { Twitter} from "./TwitterAPI/Twitter";
-import { Facebook} from "../admin/Facebook";
 import {FacebookContainer, FacebookEventer} from "./content"
-
+import {Linkdin} from "../admin/Linkdin"
 
 var data = [
+    {
+        title: "",
+        subtitle: "LinkedIn",
+        action: <Linkdin/>
+    },
+   
     {
         title: "",
         subtitle:"",
@@ -21,11 +26,6 @@ var data = [
         action: <FacebookEventer/>
     },
    
-    {
-        title: "",
-        subtitle: "LinkedIn",
-        action: ""
-    },
    
     
   
