@@ -8,12 +8,13 @@ import { Informationboard } from './app/slideShow/Informationboard/Informationbo
 function App() {
   return (
     <div className="App">
-        <AdminShell/>
     <main>
-      <AdminShell />
+      <div className = "gridApp"><Informationboard/></div>
+      <SlideShowShell slides = {defaultSlides}/>
     </main>
-    
     </div>
   );
 }
 export default App;
+
+
