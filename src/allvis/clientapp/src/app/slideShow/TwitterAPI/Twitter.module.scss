@@ -1,35 +1,46 @@
 .twitter {
-	font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Calibri, sans-serif;
-	line-height: 1rem;
-	border-color: #eee #ddd #bbb;
-	border-radius: 0.313rem;
-	border-style: solid;
-	border-width: 0.063rem;
-	box-shadow: 0 0.063rem 0.188rem rgba(0, 0, 0, 0.15);
-	margin: 10px 5px;
-	
-	p {
-		
-		font-size: 1rem;
-		font-weight: normal;
-		line-height: 1.25rem;
-		
-	}
-	
-	img {
-		width:25rem;
-		height: auto;
-		position: relative;
-	}
-	h1 {
-		font-size: xx-large;
-		text-align: right;
-		
-	}
+    font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Calibri, sans-serif;
+    line-height: 1rem;
+    border-color: #eee #ddd #bbb;
+    border-radius: 0.313rem;
+    border-style: solid;
+    border-width: 0.063rem;
+    box-shadow: 0 0.063rem 0.188rem rgba(0, 0, 0, 0.15);
+    margin: 10px 5px;
 
+    p {
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.25rem;
+    }
+
+    img {
+        width: 25rem;
+        height: auto;
+        position: relative;
+    }
+    h1 {
+        font-size: xx-large;
+        text-align: right;
+    }
+
+    display: inline-block;
+    font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Calibri, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    border-color: #eee #ddd #bbb;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    margin: 10px 5px;
+    padding: 0 16px 16px 0;
+    width: 900px;
 }
 
 .ol {
+<<<<<<< HEAD
 	height: 20rem;
 	width: 70%;
 	position: absolute;
@@ -38,4 +49,11 @@
 
 	
 	
+=======
+    height: 100%;
+    width: 75%;
+    position: absolute;
+    top: 2rem;
+    right: 10rem;
+>>>>>>> new push
 }

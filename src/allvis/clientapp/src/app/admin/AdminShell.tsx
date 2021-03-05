@@ -3,7 +3,6 @@ import cx from 'classnames'
 import {Twitter} from '../slideShow/TwitterAPI/Twitter'
 import {Linkdin}  from './Linkdin'
 
-
 export const AdminShell = () => {
 
      React.useEffect(() => {
@@ -17,7 +16,7 @@ export const AdminShell = () => {
     return(
 
         <div>
-            <Linkdin/>
+            <Twitter />
 
         </div>
     )
