@@ -1,4 +1,5 @@
 .twitter {
+<<<<<<< Updated upstream
     display: inline-block;
     font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Calibri, sans-serif;
     font-size: 12px;
@@ -37,6 +38,43 @@
 .twitter img {
     width: 900px;
 }
+=======
+	font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Calibri, sans-serif;
+	line-height: 1rem;
+	border-color: #eee #ddd #bbb;
+	border-radius: 0.313rem;
+	border-style: solid;
+	border-width: 0.063rem;
+	box-shadow: 0 0.063rem 0.188rem rgba(0, 0, 0, 0.15);
+	margin: 10px 5px;
+	
+	p {
+		
+		font-size: 1rem;
+		font-weight: normal;
+		line-height: 1.25rem;
+		
+	}
+	
+	img {
+		width:25rem;
+		height: auto;
+		position: relative;
+	}
+	h1 {
+		font-size: xx-large;
+		text-align: right;
+	}
+
+}
+
+.ol {
+	height: 100%;
+	width: 75%;
+	position: absolute;
+	top: 2rem;
+	right: 10rem;
+>>>>>>> Stashed changes
 
 .twitter h1 {
     font-size: xx-large;
