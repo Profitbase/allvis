@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { AdminShell } from './app/admin/AdminShell';
 import defaultSlides from "./app/slideShow/sites-slide"
 import {SlideShowShell} from "./app/slideShow/SlideShowShell"
@@ -8,9 +8,12 @@ import { Informationboard } from './app/slideShow/Informationboard/Informationbo
 function App() {
   return (
     <div className="App">
-        <AdminShell/>
+       
     <main>
-      <AdminShell />
+     
+
+      <Informationboard/>
+      <SlideShowShell slides = {defaultSlides}/>
     </main>
     
     </div>

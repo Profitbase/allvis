@@ -26,13 +26,16 @@ export const Twitter = () => {
     }
     
     return(
-    <ol>
+    <ol className={cx(styles.ol)}>
         {tweets.map(tweet => (
-            <div className={cx(styles.twitter, styles.pa)}>
+            
+            <div className={cx(styles.twitter)}>
                 <p>{tweet.text}</p>
-                <p><img src= {tweet.medium} alt = "" /></p>
+                <img src={tweet.medium}></img>
                 <h1><p><AiFillTwitterCircle />This post is from Twitter </p></h1>
+               
             </div>
+        
         ))}
 
     </ol>
