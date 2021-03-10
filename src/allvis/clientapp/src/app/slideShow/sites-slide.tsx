@@ -26,8 +26,6 @@ var data = [
         subtitle: "LinkedIn",
         action: <Linkdin/>
     }, 
-   
-    
   
   ]
 

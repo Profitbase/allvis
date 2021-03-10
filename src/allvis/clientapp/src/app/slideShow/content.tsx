@@ -95,7 +95,6 @@ export const TwitterContainer = () => {
       const script = document.createElement("script");
       script.setAttribute("src", "https://c64.assets-yammer.com/assets/platform_embed.js");
       document.getElementsByClassName("yammer-embed")[0].appendChild(script);
-
     }, []);
     
     return (
