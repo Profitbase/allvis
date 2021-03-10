@@ -3,11 +3,7 @@ import {FacebookContainer, FacebookEventer} from "./content"
 import {Linkdin} from "../admin/Linkdin"
 
 var data = [
-    {
-        title: "",
-        subtitle: "LinkedIn",
-        action: <Linkdin/>
-    },
+   
    
     {
         title: "",
@@ -25,7 +21,11 @@ var data = [
         subtitle: "",
         action: <FacebookEventer/>
     },
-   
+    {
+        title: "",
+        subtitle: "LinkedIn",
+        action: <Linkdin/>
+    }, 
    
     
   
