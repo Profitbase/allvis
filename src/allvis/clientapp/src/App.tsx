@@ -9,13 +9,15 @@ function App() {
   return (
     <div className="App">
        
-    <main>
-     
+    <main>   
 
       <Informationboard/>
+
       <SlideShowShell slides = {defaultSlides}/>
     </main>
     
+  
+
     </div>
   );
 }
