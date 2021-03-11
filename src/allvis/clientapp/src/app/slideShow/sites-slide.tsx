@@ -26,7 +26,11 @@ var data = [
         subtitle: "LinkedIn",
         action: <Linkdin/>
     }, 
-    
+    {
+        title: "",
+        subtitle: "I dag er det fint vær",
+        action: ""
+    }, 
   
   ]
 
