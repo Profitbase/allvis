@@ -1,5 +1,6 @@
 ﻿using allvis.Controllers.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -56,7 +57,6 @@ namespace allvis.Controllers
                             text = tweets.data[i].text,
                             medium = tweets.includes.media.Where(t => tweets.data[i].attachments.media_keys.Contains(t.media_key)).Select(m => m.url).ToList(),
                         });
-
                     };
                 }
                 foreach(var tweet in tweetlist)
@@ -76,6 +76,8 @@ namespace allvis.Controllers
 
           
         }
+
+   
 
 
     }
