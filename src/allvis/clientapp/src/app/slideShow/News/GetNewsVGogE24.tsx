@@ -1,12 +1,17 @@
 import * as React from 'react'
 import cx from 'classnames'
 import { useState, useEffect } from 'react'
-import INewsVgDto from './INewsVgDto';
+import INewsDto from './INewsVGogE24Dto'
+import NewsSources from './NewsSources'
 
-export const VgSport = () => {
+interface INewsProps{
+    kanal: NewsSources
+}
+
+export const NewsVGOgE24 = (props: INewsProps) => {
 
     const [time, setTime] = useState<number>()
-    const [News, setNews] = useState<INewsVgDto []>([])
+    const [news, setNews] = useState<INewsDto[]>([])
 
     useEffect(() => {
         getNews()
@@ -16,22 +21,19 @@ export const VgSport = () => {
     }, []);
 
     const getNews = async () => {
-        const apiCall = await fetch('api/NewsVgSport')
+        const apiCall = await fetch(`api/NewsVGOgE24?source=${props.kanal}`);
         const response = await apiCall.json();
-        console.log(response)
         setNews(response)
     }
 
     return(
-
         <div>
             <ol>
-                {News.map(News => (
+                {news.map(n => (
                     <div>
-                        <h1>{News.title}</h1>
-                        <p>{News.description}</p>
-                        <p>{News.category}</p>
-                        <p><img src= {News.image} alt = ""  width = "300"/></p>
+                        <h1>{n.title}</h1>
+                        <p>{n.description}</p>
+                        <p><img src= {n.image} alt = ""  width = "300"/></p>
                     </div>
                 ))}
             </ol>

@@ -1,12 +1,17 @@
 import * as React from 'react'
 import cx from 'classnames'
 import { useState, useEffect } from 'react'
-import INewsE24Dto from './INewsE24Dto';
+import INewsNrkDto from './INewsNrkDto'
+import NewsSources from './NewsSources'
 
-export const E24BorsOgFinans = () => {
+interface INewsProps{
+    kanal: NewsSources
+}
+
+export const NewsNRK = (props: INewsProps) => {
 
     const [time, setTime] = useState<number>()
-    const [News, setNews] = useState<INewsE24Dto []>([])
+    const [news, setNews] = useState<INewsNrkDto[]>([])
 
     useEffect(() => {
         getNews()
@@ -16,22 +21,19 @@ export const E24BorsOgFinans = () => {
     }, []);
 
     const getNews = async () => {
-        const apiCall = await fetch('api/NewsE24BorsOgFinans')
+        const apiCall = await fetch(`api/NewsNrk?source=${props.kanal}`);
         const response = await apiCall.json();
-        console.log(response)
         setNews(response)
     }
 
     return(
-
         <div>
             <ol>
-                {News.map(News => (
+                {news.map(n => (
                     <div>
-                        <h1>{News.title}</h1>
-                        <p>{News.description}</p>
-                        <p>{News.category}</p>
-                        <p><img src= {News.image} alt = ""  width = "300"/></p>
+                        <h1>{n.title}</h1>
+                        <p>{n.description}</p>
+                        <p><img src= {n.url} alt = ""  width = "300"/></p>
                     </div>
                 ))}
             </ol>

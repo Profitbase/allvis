@@ -2,7 +2,7 @@
 
 namespace allvis.Controllers.allvis.Controllers
 {
-    public class NewsVgDataDto
+    public class NewsVGOgE24DataDto
     {
         public string title { get; set; }
         public string description { get; set; }

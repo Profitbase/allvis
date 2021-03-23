@@ -11,20 +11,29 @@ namespace allvis.Controllers
     {
         [Route("api/[controller]")]
         [ApiController]
-        public class NewsVgTechController : ControllerBase
+        public class NewsVGOgE24Controller : ControllerBase
         {
-            private int _amountOfNeews = 1;
+            private int _amountOfNeews = 2;
 
 
 
 
             // GET: api/<TwitterAPI>
             [HttpGet]
-            public async Task<List<NewsVgDataDto>> Get()
+            public async  Task<List<NewsVGOgE24DataDto>> Get(int source)
             {
-                try
+            try
                 {
-                    string url = "https://www.vg.no/rss/feed/?categories=1107";
+                    var sources = new Dictionary<NewsSources, string>
+                    {
+                        { NewsSources.VG_News,  "https://www.vg.no/rss/feed/?categories=1068" },
+                        { NewsSources.VG_Sport, "https://www.vg.no/rss/feed/?categories=1072"},
+                        { NewsSources.VG_Tech, "https://www.vg.no/rss/feed/?categories=1107" },
+                        { NewsSources.E24_Aksjetips,  "https://e24.no/rss2/?seksjon=aksjetips" },
+                        { NewsSources.E24_BorsOgFinans, "https://e24.no/rss2/?seksjon=boers-og-finans"},
+                    };
+
+                    string url = sources[(NewsSources)source];
 
                     var webClient = new WebClient();
                     string result = webClient.DownloadString(url);
@@ -32,7 +41,7 @@ namespace allvis.Controllers
                     XDocument document = XDocument.Parse(result);
 
                     return (from descendant in document.Descendants("item")
-                            select new NewsVgDataDto()
+                            select new NewsVGOgE24DataDto()
                             {
                                 title = descendant.Element("title").Value,
                                 description = descendant.Element("description").Value,
@@ -49,3 +58,4 @@ namespace allvis.Controllers
         }
     }
 }
+

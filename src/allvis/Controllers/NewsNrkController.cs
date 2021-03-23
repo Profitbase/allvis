@@ -18,11 +18,20 @@ namespace allvis.Controllers
 
             // GET: api/<TwitterAPI>
             [HttpGet]
-            public async Task<List<NewsNrkDataDto>> Get()
+            public async Task<List<NewsNrkDataDto>> Get(int source)
             {
                 try
                 {
-                    string url = "https://www.nrk.no/nyheter/siste.rss";
+                    var sources = new Dictionary<NewsSources, string>
+                    {
+                        { NewsSources.NRK_News,  "https://www.nrk.no/nyheter/siste.rss" },
+                        { NewsSources.NRK_sport, "https://www.nrk.no/sport/toppsaker.rss"},
+                        {NewsSources.NRK_Rogaland, "https://www.nrk.no/rogaland/toppsaker.rss" },
+
+                    };
+
+
+                    string url = sources[(NewsSources)source];
 
                     var webClient = new WebClient();
                     string result = webClient.DownloadString(url);

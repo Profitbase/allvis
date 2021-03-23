@@ -1,4 +1,4 @@
-interface INewsNrkRogalandDto{
+interface INewsNrkDto{
     title: string,
     description: string,
     pubDate: string,
@@ -6,4 +6,4 @@ interface INewsNrkRogalandDto{
     url: string
 } 
 
-export default INewsNrkRogalandDto
+export default INewsNrkDto
