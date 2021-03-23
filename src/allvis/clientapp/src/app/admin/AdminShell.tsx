@@ -3,6 +3,10 @@ import cx from 'classnames'
 import styles from "./AdminShell.module.scss"
 import logo from './logo.svg'
 
+import { useState, useEffect } from 'react'
+import {NewsVGOgE24} from '../slideShow/News/GetNewsVGogE24'
+import {NewsNRK} from '../slideShow/News/GetNewsNRK'
+import NewsSources from '../slideShow/News/NewsSources'
 
 import React, { Component } from 'react';
 import { Card, FormControl, FormLabel, ListGroup } from 'react-bootstrap';
@@ -115,11 +119,18 @@ class AdminShell extends Component<{},any>{
             
                 </div> 
                 </div>
-            
-
+           
 
         );
        }
     }
 
 export default AdminShell;
+        <div>
+            <NewsVGOgE24 kanal = {NewsSources.VG_News}/>
+            <NewsNRK kanal = {NewsSources.NRK_News} />
+            <NewsNRK kanal = {NewsSources.NRK_Rogaland} />
+            AdminShell
+        </div>
+    
+

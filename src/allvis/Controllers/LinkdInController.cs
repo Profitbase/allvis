@@ -15,17 +15,13 @@ namespace allvis.Controllers
     public class LinkdinController : ControllerBase
     {
         private readonly HttpClient _client;
-
-        private readonly string COMPANYID = "78xaaniius3n35";
-        private readonly string COMPANYSECRET = "nNq2plrBZL2tlWlK";
-
-        private string _bearerToken = "AAAAAAAAAAAAAAAAAAAAAE0tMwEAAAAAI2QW%2FZmImgXvGvH%2BJRGS9pOyE%2FI%3DfX8cXrY5VgD9Ka68WZmogFCM2NWRSu7TwSl9IVLLGAAfw5Qyih";
-
+        private string access_token = "AQVnanJhLevLD51nmCsAJv6ZxnJV5qDnFp5HClVUiRhnzwtIWbs0PllPPl7VGS_Omwrrpcu3F-LZkTRBhiuo4atJaK7FMrebltjsxeIjBA7TqfV7bdH_LgcPce-UiPskCcMrVm7qgL3hjiym0GCn_cr1bSQXScPapW0pEi1dN8XlLX-J-Iijdh_JqGXxw7BNM76-T-bctcScuN5L2PO5UATO0v0Mt9FcxEIEX_vsZcZqGbBesWiZuJh__k8I10snWUrbLu6uJTCY3QydM3avvFYGaIxEem562jGLkT4kKJ0-eW8twKdhQB_NQ23m_a4N6MJnRSCebSx92nto0ZLTFi7TuKDbqw";
+        private string COMPANYID = "70761";
 
         public LinkdinController(IHttpClientFactory clientFactory)
         {
             _client = clientFactory.CreateClient();
-            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _bearerToken);
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", access_token);
         }
 
 
@@ -38,41 +34,13 @@ namespace allvis.Controllers
 
             var res = response.Content.ReadAsStringAsync();
 
-            var tweets = JsonSerializer.Deserialize<LinkdinAPIResponse>(await response.Content.ReadAsStringAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            var posts = JsonSerializer.Deserialize<LinkdinAPIResponse>(await response.Content.ReadAsStringAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
             return new LinkdinDataDto()
             {
-                text = tweets.data[1].text,
-                medium = tweets.includes.media[0].url,
-                type = GetMediaType(tweets.includes.media[0].type)
+                
             };
         }
-
-
-        private string GetMediaType(string type)
-        {
-            string mediaType;
-
-            if (type == "photo")
-            {
-                mediaType = "photo";
-            }
-            else if (type == "video")
-            {
-                mediaType = "video";
-            }
-            else
-            {
-                mediaType = null;
-            }
-            return mediaType;
-        }
-
-
-
-
-
-
 
     }
 
