@@ -7,10 +7,11 @@ import { Informationboard } from './app/slideShow/Informationboard/Informationbo
 
 function App() {
   return (
-    <div className="App">
-    <main>
-      <AdminShell/>
-    </main>
+    <div className="App"> 
+      <main>   
+        <Informationboard/>
+        <SlideShowShell slides = {defaultSlides}/>
+      </main>
     </div>
   );
 }
