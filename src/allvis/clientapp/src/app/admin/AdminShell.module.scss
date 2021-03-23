@@ -1,0 +1,61 @@
+.logo {
+	position: absolute;
+	width: 21.375rem;
+	height: 5rem;
+	left: 0.6875rem;
+	top: 0.6875rem;
+	background-color: #032341;
+	display: inline;
+	box-sizing: border-box;
+    
+
+}
+img {
+	position: absolute;
+	width: 21.375rem;
+	height: 5rem;
+	left: 0.6875rem;
+	top: 0.6875rem;
+	background-color: #032341;
+	display: inline;
+
+	box-sizing: border-box;
+}
+.title {
+	position: absolute;
+	left: 1rem;
+	top: 4.5rem;
+	font-family: Mukta Vaani;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.5rem;
+	line-height: 2.6875rem;
+	color: #ffffff;
+
+
+	width: 300px;
+	height: 30px;
+	text-align: center;
+
+
+}
+.informationboard {
+	position: absolute;
+	left: 0rem;
+	top: 0rem;
+	background: #032341;
+	text-align: left;
+	font-family: Mukta Vaani;
+	z-index: 1;
+	position: absolute;
+	width: 200vh;
+	height: 150px;
+
+
+}
+.text{
+	position: absolute;
+	color: red;
+	top: 20rem;
+	z-index: 1;
+}
