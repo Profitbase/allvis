@@ -1,98 +1,98 @@
 .informationboard {
-    position: absolute;
-    width: 27rem;
-    height: 140vh;
-    left: 0rem;
-    top: 0rem;
-    background: #032341;
-    text-align: left;
-    font-family: Mukta Vaani;
-    z-index: 2;
+	position: absolute;
+	width: 25rem;
+	height: 140vh;
+	left: 0rem;
+	top: 0rem;
+	background: #032341;
+	text-align: left;
+	font-family: Mukta Vaani;
+	z-index: 2;
 }
 .dateinfo {
-    position: absolute;
-    height: 1.5625rem;
-    top: 15rem;
-    font-family: Mukta Vaani;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.625rem;
-    line-height: 2.6875rem;
-    left: 1rem;
-    color: #ffffff;
-    text-align: left;
+	position: absolute;
+	height: 1.5625rem;
+	top: 15rem;
+	font-family: Mukta Vaani;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.625rem;
+	line-height: 2.6875rem;
+	left: 1rem;
+	color: #ffffff;
+	text-align: left;
 }
-
 .lunchinfo {
-    position: absolute;
-    height: 1.5625rem;
-    top: 30rem;
-    font-family: Mukta Vaani;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.625rem;
-    line-height: 2.6875rem;
-    left: 1rem;
-    color: #ffffff;
-    text-align: left;
+	position: absolute;
+	height: 1.5625rem;
+	top: 30rem;
+	font-family: Mukta Vaani;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.625rem;
+	line-height: 2.6875rem;
+	left: 1rem;
+	color: #ffffff;
+	text-align: left;
 }
-
 .weatherinfo {
-    position: absolute;
-    height: 1.5625rem;
-    left: 5.5625rem;
-    top: 25rem;
-    font-family: Mukta Vaani;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.625rem;
-    line-height: 2.6875rem;
-    left: 1rem;
-    color: #ffffff;
+	position: absolute;
+	height: 1.5625rem;
+	top: 25rem;
+	font-family: Mukta Vaani;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.625rem;
+	line-height: 2.6875rem;
+	left: 1rem;
+	color: #ffffff;
 }
-
 .clock {
-    position: absolute;
-    width: 19.5rem;
-    height: 1.5625rem;
-    top: 20rem;
-    font-family: Mukta Vaani;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.625rem;
-    line-height: 2.6875rem;
-    left: 1rem;
-    color: #ffffff;
-    text-align: left;
+	position: absolute;
+	width: 19.5rem;
+	height: 1.5625rem;
+	top: 20rem;
+	font-family: Mukta Vaani;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.625rem;
+	line-height: 2.6875rem;
+	left: 1rem;
+	color: #ffffff;
+	text-align: left;
 }
+.logo {
+	position: absolute;
+	width: 21.375rem;
+	height: 5rem;
+	left: 0.6875rem;
+	top: 0.6875rem;
+	background-color: #032341;
+	display: inline;
+	box-sizing: border-box;
 
-.logo,
+}
 img {
-    position: absolute;
-    width: 21.375rem;
-    height: 5rem;
-    left: 0.6875rem;
-    top: 0.6875rem;
-    background-color: #032341;
-    display: inline;
-    float: left;
-    mix-blend-mode: lighten;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    filter: drop-shadow(0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
+	position: absolute;
+	width: 21.375rem;
+	height: 5rem;
+	left: 0.6875rem;
+	top: 0.6875rem;
+	background-color: #032341;
+	display: inline;
+	
+	box-sizing: border-box;
 }
 .title {
-    position: absolute;
-    width: 3.5625rem;
-    height: 2.6875rem;
-    left: 2.3125rem;
-    top: 3.8125rem;
-
-    font-family: Mukta Vaani;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.625rem;
-    line-height: 2.6875rem;
-
-    color: #ffffff;
+	position: absolute;
+	width: 3.5625rem;
+	height: 2.6875rem;
+	left: 2.3125rem;
+	top: 4rem;
+	font-family: Mukta Vaani;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.625rem;
+	line-height: 2.6875rem;
+	color: #ffffff;
 }

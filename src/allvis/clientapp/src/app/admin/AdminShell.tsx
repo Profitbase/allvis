@@ -1,23 +1,21 @@
 import * as React from 'react'
 import cx from 'classnames'
-import {Twitter} from '../slideShow/TwitterAPI/Twitter'
-import {Linkdin}  from './Linkdin'
+import { useState, useEffect } from 'react'
+import {NewsVGOgE24} from '../slideShow/News/GetNewsVGogE24'
+import {NewsNRK} from '../slideShow/News/GetNewsNRK'
+import NewsSources from '../slideShow/News/NewsSources'
+
+
 
 export const AdminShell = () => {
-
-     React.useEffect(() => {
-        const loaddata = async() => {
-            const result = await fetch('api/Twitter')
-            console.log(await result.json())
-        }
-        loaddata()
-     }, [])
 
     return(
 
         <div>
-            <Twitter />
-
+            <NewsVGOgE24 kanal = {NewsSources.VG_News}/>
+            <NewsNRK kanal = {NewsSources.NRK_News} />
+            <NewsNRK kanal = {NewsSources.NRK_Rogaland} />
+            AdminShell
         </div>
     )
 }

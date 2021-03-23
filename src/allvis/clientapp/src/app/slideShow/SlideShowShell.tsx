@@ -26,10 +26,10 @@ export const SlideShowShell = ({slides}:{[key:string]:any}) => {
       <section>{s.action}</section>
 
       </div>
+      
         </div>
       ))}
     </section>
     )
 }
-
 

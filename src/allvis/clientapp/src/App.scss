@@ -1,27 +1,26 @@
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 .App {
     display: grid;
     grid-gap: 1rem;
     text-align: center;
 }
-
 .gridApp {
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 7;
 }
-
 .App-logo {
     height: 40vmin;
     pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
 .App-header {
     background-color: #282c34;
     min-height: 100vh;
@@ -32,33 +31,21 @@
     font-size: calc(0.625rem + 2vmin);
     color: white;
 }
-
 .App-link {
     color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
 body {
     margin: 0;
     background-color: white;
 }
-
 .slider {
     position: relative;
     height: 80vh;
 }
-
 .slide {
     position: absolute;
     top: 0;
-    left: 10rem;
+    left: 2rem;
     width: 100%;
     height: 100%;
     display: flex;
@@ -66,25 +53,31 @@ body {
     align-items: center;
     opacity: 0;
     transition: 0.3s ease;
+    h1 {
+        top: 2rem;
+        color: #032341;
+    }
+    h2 {
+        top: 2rem;
+        color: #032341;
+    }
 }
-
-.slide h1,
-.slide h2 {
-    top: 2rem;
-    color: #032341;
-}
-
 .slide.active {
     opacity: 1;
     transition-duration: 0.2s;
     background-color: white;
     position: absolute;
-    top: 2rem;
-    left: 25rem;
+    top: 1rem;
+    left: 30rem;
     width: 75%;
     float: right;
     height: 100%;
     object-fit: cover;
     z-index: 1;
     margin-top: 1rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }

@@ -1,5 +1,6 @@
 ﻿using allvis.Controllers.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -21,7 +22,7 @@ namespace allvis.Controllers
 
         private  string _bearerToken = "AAAAAAAAAAAAAAAAAAAAAE0tMwEAAAAAI2QW%2FZmImgXvGvH%2BJRGS9pOyE%2FI%3DfX8cXrY5VgD9Ka68WZmogFCM2NWRSu7TwSl9IVLLGAAfw5Qyih";
 
-        private int _amountOfTweets = 3;
+        private int _amountOfTweets = 2;
 
 
         public TwitterController(IHttpClientFactory clientFactory)
@@ -56,7 +57,6 @@ namespace allvis.Controllers
                             text = tweets.data[i].text,
                             medium = tweets.includes.media.Where(t => tweets.data[i].attachments.media_keys.Contains(t.media_key)).Select(m => m.url).ToList(),
                         });
-
                     };
                 }
                 foreach(var tweet in tweetlist)
@@ -76,6 +76,8 @@ namespace allvis.Controllers
 
           
         }
+
+   
 
 
     }
