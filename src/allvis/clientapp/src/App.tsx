@@ -13,15 +13,14 @@ function App() {
     <div className="App">
        
     <main>  
-      <AdminShell/>
-
-      {/* <Navigation />
-      <Routes />
+     {  /* <AdminShell/> */ }
       <Informationboard/>
-      <SlideShowShell slides = {defaultSlides}/> */}
+      <SlideShowShell slides = {defaultSlides}/> 
 
     </main>
     </div>
   );
 }
 export default App;
+
+
