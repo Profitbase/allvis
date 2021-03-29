@@ -42,7 +42,6 @@ namespace allvis.Controllers
 
                     List<NewsNrkDataDto> nyheter = new List<NewsNrkDataDto>();
 
-
                     foreach (XElement item in data)
                     {
                         var imgurl = "";
@@ -75,8 +74,6 @@ namespace allvis.Controllers
                         {
                             pubDate = item.Element("pubDate").Value;
                         }
-
-
 
                         nyheter.Add(new NewsNrkDataDto
                         {
