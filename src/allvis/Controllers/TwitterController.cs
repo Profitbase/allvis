@@ -59,10 +59,6 @@ namespace allvis.Controllers
                         });
                     };
                 }
-                foreach(var tweet in tweetlist)
-                {
-
-                }
 
 
                 return tweetlist;

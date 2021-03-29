@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App"> 
       <main>   
-        <Informationboard/>
-        <SlideShowShell slides = {defaultSlides}/>
+      <Informationboard/>
+      <SlideShowShell slides = {defaultSlides}/> 
       </main>
     </div>
   );

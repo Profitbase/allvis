@@ -14,8 +14,10 @@ export const AdminShell = () => {
         <div>
             <NewsVGOgE24 kanal = {NewsSources.VG_News}/>
             <NewsNRK kanal = {NewsSources.NRK_News} />
+            <NewsNRK kanal = {NewsSources.NRK_sport} />
             <NewsNRK kanal = {NewsSources.NRK_Rogaland} />
             AdminShell
+            hei
         </div>
     )
 }
