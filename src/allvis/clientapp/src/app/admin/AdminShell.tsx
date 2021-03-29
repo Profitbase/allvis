@@ -130,7 +130,7 @@ export default AdminShell;
             <NewsVGOgE24 kanal = {NewsSources.VG_News}/>
             <NewsNRK kanal = {NewsSources.NRK_News} />
             <NewsNRK kanal = {NewsSources.NRK_Rogaland} />
-            AdminShell
+            <NewsVGOgE24 kanal = {NewsSources.E24_Aksjetips}/>
         </div>
     
 

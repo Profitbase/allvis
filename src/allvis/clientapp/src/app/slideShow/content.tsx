@@ -38,7 +38,7 @@ export const TwitterContainer = () => {
       anchor.setAttribute("class", "fb-page");
       anchor.setAttribute("data-tabs", "timeline"); 
       anchor.setAttribute("href", "https://www.facebook.com/profitbase/");
-      anchor.setAttribute("data-height", "700px"); 
+      anchor.setAttribute("data-height", "500px"); 
       anchor.setAttribute("data-width", "500px");  
       document.getElementsByClassName("facebook-embed")[0].appendChild(anchor);
       
@@ -63,7 +63,7 @@ export const TwitterContainer = () => {
       anchor.setAttribute("class", "fb-page");
       anchor.setAttribute("data-tabs", "events"); 
       anchor.setAttribute("href", "https://www.facebook.com/profitbase/");
-      anchor.setAttribute("data-height", "700px"); 
+      anchor.setAttribute("data-height", "500px"); 
       anchor.setAttribute("data-width", "500px");  
       document.getElementsByClassName("facebookeventer-embed")[0].appendChild(anchor);
       const script = document.createElement("script");

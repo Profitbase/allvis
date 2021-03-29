@@ -3,6 +3,8 @@ import cx from 'classnames'
 import { useState, useEffect } from 'react'
 import INewsNrkDto from './INewsNrkDto'
 import NewsSources from './NewsSources'
+import styles from "./news.module.scss"
+import { url } from 'inspector'
 
 interface INewsProps{
     kanal: NewsSources
@@ -28,12 +30,14 @@ export const NewsNRK = (props: INewsProps) => {
 
     return(
         <div>
-            <ol>
+            <ol className={cx(styles.ol)}>
                 {news.map(n => (
-                    <div>
+                    <div className={cx(styles.StyleNews)}>
                         <h1>{n.title}</h1>
                         <p>{n.description}</p>
-                        <p><img src= {n.url} alt = ""  width = "300"/></p>
+                        <img src= {n.url}></img>
+                        <p>{n.url}</p>
+                       
                     </div>
                 ))}
             </ol>
