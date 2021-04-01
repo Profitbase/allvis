@@ -42,7 +42,6 @@ class AdminShell extends Component<{},any>{
                 <img className={cx(styles.logo)} src={logo} alt="Logo" />
                     <h1 className={cx(styles.title)}>ALLVIS ADMIN SIDE</h1>
                 
-                
                 </div>
                 <div className={cx(styles.text)}>
                     <h2>Administrer lysbildefremvisningen</h2>
@@ -112,10 +111,6 @@ class AdminShell extends Component<{},any>{
                     </tr>
                     </table>
                 </div>
-                
-                
-                
-                
             
                 </div> 
                 </div>
