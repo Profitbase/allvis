@@ -9,6 +9,8 @@
         VG_Sport = 5,
         VG_Tech = 6,
         E24_BorsOgFinans = 7,
-        E24_Aksjetips = 8
+        E24_Aksjetips = 8,
+        VG_News_toppsaker = 9,
+        NRK_News_toppsaker = 10
     }
 }

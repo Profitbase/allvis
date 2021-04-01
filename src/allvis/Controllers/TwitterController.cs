@@ -22,8 +22,7 @@ namespace allvis.Controllers
 
         private  string _bearerToken = "AAAAAAAAAAAAAAAAAAAAAE0tMwEAAAAAI2QW%2FZmImgXvGvH%2BJRGS9pOyE%2FI%3DfX8cXrY5VgD9Ka68WZmogFCM2NWRSu7TwSl9IVLLGAAfw5Qyih";
 
-        private int _amountOfTweets = 2;
-
+        private int _amountOfTweets = 1;
 
         public TwitterController(IHttpClientFactory clientFactory)
         {
@@ -31,13 +30,13 @@ namespace allvis.Controllers
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _bearerToken);
         }
 
-
         // GET: api/<TwitterAPI>
         [HttpGet]
         public async Task<List <TwitterDataDto>> Get()
         {
             var url = $"https://api.twitter.com/2/users/{COMPANYID}/tweets?expansions=attachments.media_keys&media.fields=preview_image_url,url";
             var response = await _client.GetAsync(url);
+
             try
             {
                 var twitter = await response.Content.ReadAsStringAsync();
@@ -59,12 +58,7 @@ namespace allvis.Controllers
                         });
                     };
                 }
-                foreach(var tweet in tweetlist)
-                {
-
-                }
-
-
+                
                 return tweetlist;
                 
             }

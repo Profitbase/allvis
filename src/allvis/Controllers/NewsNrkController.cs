@@ -24,10 +24,10 @@ namespace allvis.Controllers
                 {
                     var sources = new Dictionary<NewsSources, string>
                     {
+                        { NewsSources.NRK_News_toppsaker,  "https://www.nrk.no/toppsaker.rss" },
                         { NewsSources.NRK_News,  "https://www.nrk.no/nyheter/siste.rss" },
                         { NewsSources.NRK_sport, "https://www.nrk.no/sport/toppsaker.rss"},
                         {NewsSources.NRK_Rogaland, "https://www.nrk.no/rogaland/toppsaker.rss" },
-
                     };
 
 

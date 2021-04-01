@@ -77,7 +77,6 @@ namespace allvis.Controllers
 
             return iconName;
         }
-    
 
         private static string GetUppercase(string description)
         {  

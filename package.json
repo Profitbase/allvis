@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Profitbase/allvis#readme",
   "dependencies": {
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^3.4.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.1",

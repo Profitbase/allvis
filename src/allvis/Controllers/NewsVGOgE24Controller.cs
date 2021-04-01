@@ -13,10 +13,7 @@ namespace allvis.Controllers
         [ApiController]
         public class NewsVGOgE24Controller : ControllerBase
         {
-            private int _amountOfNeews = 2;
-
-
-
+            private int _amountOfNeews = 1;
 
             // GET: api/<TwitterAPI>
             [HttpGet]
@@ -26,6 +23,7 @@ namespace allvis.Controllers
                 {
                     var sources = new Dictionary<NewsSources, string>
                     {
+                        { NewsSources.VG_News_toppsaker,  "https://www.vg.no/rss/feed/forsiden/ "},
                         { NewsSources.VG_News,  "https://www.vg.no/rss/feed/?categories=1068" },
                         { NewsSources.VG_Sport, "https://www.vg.no/rss/feed/?categories=1072"},
                         { NewsSources.VG_Tech, "https://www.vg.no/rss/feed/?categories=1107" },
