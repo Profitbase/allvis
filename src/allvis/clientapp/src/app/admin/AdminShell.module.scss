@@ -1,14 +1,15 @@
+
+$bgcolor1: #032341;
 .logo {
 	position: absolute;
 	width: 21.375rem;
 	height: 5rem;
 	left: 0.6875rem;
 	top: 0.6875rem;
-	background-color: #032341;
+	background-color: $bgcolor1;
 	display: inline;
 	box-sizing: border-box;
     
-
 }
 img {
 	position: absolute;
@@ -16,7 +17,7 @@ img {
 	height: 5rem;
 	left: 0.6875rem;
 	top: 0.6875rem;
-	background-color: #032341;
+	background-color: $bgcolor1;
 	display: inline;
 
 	box-sizing: border-box;
@@ -43,19 +44,22 @@ img {
 	position: absolute;
 	left: 0rem;
 	top: 0rem;
-	background: #032341;
+	background: $bgcolor1;
 	text-align: left;
 	font-family: Mukta Vaani;
 	z-index: 1;
 	position: absolute;
-	width: 200vh;
+	width: 400vh;
 	height: 150px;
 
 
 }
 .text{
 	position: absolute;
+	text-align: center;
 	color: red;
 	top: 20rem;
 	z-index: 1;
+	display: left;
+	
 }

@@ -1,98 +1,84 @@
+
+@import "./standard.scss";
+
 .informationboard {
 	position: absolute;
-	width: 25rem;
+	width: 25%;
 	height: 140vh;
 	left: 0rem;
 	top: 0rem;
-	background: #032341;
+	background: $bgcolor1;
 	text-align: left;
-	font-family: Mukta Vaani;
+	font-family: $font1;
 	z-index: 2;
 }
-.dateinfo {
+@mixin information-position {
 	position: absolute;
-	height: 1.5625rem;
-	top: 15rem;
-	font-family: Mukta Vaani;
+	width: 100%;
+	font-family: $font1;
 	font-style: normal;
 	font-weight: normal;
+	height: 1.5625rem;
 	font-size: 1.625rem;
 	line-height: 2.6875rem;
 	left: 1rem;
-	color: #ffffff;
+	color: $color1;
 	text-align: left;
+	
+}
+.dateinfo {
+	@include information-position();
+	top: 15rem;
+	
 }
 .lunchinfo {
-	position: absolute;
-	height: 1.5625rem;
+	
+	@include information-position();	
 	top: 30rem;
-	font-family: Mukta Vaani;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 1.625rem;
-	line-height: 2.6875rem;
-	left: 1rem;
-	color: #ffffff;
-	text-align: left;
+
 }
 .weatherinfo {
-	position: absolute;
-	height: 1.5625rem;
+	@include information-position();	
 	top: 25rem;
-	font-family: Mukta Vaani;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 1.625rem;
-	line-height: 2.6875rem;
-	left: 1rem;
-	color: #ffffff;
+
 }
 .clock {
-	position: absolute;
-	width: 19.5rem;
-	height: 1.5625rem;
+	@include information-position();
 	top: 20rem;
-	font-family: Mukta Vaani;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 1.625rem;
-	line-height: 2.6875rem;
-	left: 1rem;
-	color: #ffffff;
-	text-align: left;
+
 }
 .logo {
 	position: absolute;
-	width: 21.375rem;
+	width: 80%;
 	height: 5rem;
 	left: 0.6875rem;
 	top: 0.6875rem;
-	background-color: #032341;
+	background-color: $bgcolor1;
 	display: inline;
 	box-sizing: border-box;
 
 }
 img {
 	position: absolute;
-	width: 21.375rem;
+	width: 100%;
 	height: 5rem;
 	left: 0.6875rem;
 	top: 0.6875rem;
-	background-color: #032341;
+	background-color: $bgcolor1;
 	display: inline;
 	
 	box-sizing: border-box;
 }
 .title {
 	position: absolute;
-	width: 3.5625rem;
+	width: 100%;
 	height: 2.6875rem;
 	left: 2.3125rem;
 	top: 4rem;
-	font-family: Mukta Vaani;
+	font-family: $font1;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 1.625rem;
 	line-height: 2.6875rem;
-	color: #ffffff;
+	color: $color1;
 }

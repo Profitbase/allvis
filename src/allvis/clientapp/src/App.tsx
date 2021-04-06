@@ -13,8 +13,8 @@ function App() {
     <div className="App">
        
     <main>  
-     {  /* <AdminShell/> */ }
-      <Informationboard/>
+    {  /* <AdminShell/>*/ } 
+     <Informationboard/>
       <SlideShowShell slides = {defaultSlides}/> 
 
     </main>

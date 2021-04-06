@@ -1,3 +1,5 @@
+$bgcolor1: #032341;
+
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
@@ -22,7 +24,7 @@
     pointer-events: none;
 }
 .App-header {
-    background-color: #282c34;
+    background-color: $bgcolor1;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -37,6 +39,7 @@
 body {
     margin: 0;
     background-color: white;
+    width: 100%;
 }
 .slider {
     position: relative;
@@ -53,13 +56,18 @@ body {
     align-items: center;
     opacity: 0;
     transition: 0.3s ease;
+    
+   
     h1 {
-        top: 2rem;
-        color: #032341;
+       
+        color: $bgcolor1;
     }
     h2 {
-        top: 2rem;
-        color: #032341;
+        color: $bgcolor1;
+        margin-bottom: 16rem;
+        font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Calibri, sans-serif;
+        
+       
     }
 }
 .slide.active {
@@ -74,7 +82,8 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    margin-top: 1rem;
+    margin-top: 3rem;
+   
 }
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {

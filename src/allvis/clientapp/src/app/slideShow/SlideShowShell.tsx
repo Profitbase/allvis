@@ -1,5 +1,8 @@
 import * as React from 'react'
 
+
+
+
 export const SlideShowShell = ({slides}:{[key:string]:any}) => {
     const [curr, setCurr] = React.useState(0);
     const { length } = slides;
@@ -9,7 +12,7 @@ export const SlideShowShell = ({slides}:{[key:string]:any}) => {
     }
     
     React.useEffect(() => {
-      setTimeout(goToNext, 8000);
+      setTimeout(goToNext, 5000);
       
     })
     
@@ -17,15 +20,15 @@ export const SlideShowShell = ({slides}:{[key:string]:any}) => {
       return null;
     }
     return (
-        <section className="slider">
+      <section className="slider">
       {slides.map((s, i) => (
         <div className={i === curr ? "slide active" : "slide"} key={s.title}>
           <div>
-      <h1>{s.title}</h1> 
-      <h2>{s.subtitle}</h2>
-      <section>{s.action}</section>
-
-      </div>
+          <h1>{s.title}</h1> 
+          <h2>{s.subtitle}</h2>
+          <section>{s.action}</section>
+          
+          </div>
       
         </div>
       ))}

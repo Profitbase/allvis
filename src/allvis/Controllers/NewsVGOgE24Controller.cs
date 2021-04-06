@@ -13,7 +13,7 @@ namespace allvis.Controllers
         [ApiController]
         public class NewsVGOgE24Controller : ControllerBase
         {
-            private int _amountOfNeews = 2;
+            private int _amountOfNeews = 1;
 
 
 

@@ -36,7 +36,7 @@ export const NewsNRK = (props: INewsProps) => {
                         <h1>{n.title}</h1>
                         <p>{n.description}</p>
                         <img src= {n.url}></img>
-                        <p>{n.url}</p>
+                        
                        
                     </div>
                 ))}

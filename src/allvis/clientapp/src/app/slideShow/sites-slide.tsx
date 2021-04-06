@@ -7,16 +7,29 @@ import {NewsNRK} from "./News/GetNewsNRK"
 
 
 
+
 var data = [
+    {
+        title:  "",
+        subtitle: "VG NYHETER",
+        action: <NewsVGOgE24 kanal = {NewsSources.VG_News} />
+    }, 
+  
     {
         title: "",
         subtitle: "",
-        action: <NewsNRK kanal = {NewsSources.NRK_News} />
+        action: <NewsVGOgE24 kanal = {NewsSources.VG_Sport} />
     }, 
     {
         title: "",
         subtitle: "",
-        action: <NewsNRK kanal = {NewsSources.NRK_Rogaland} />
+        action: <NewsVGOgE24 kanal = {NewsSources.VG_Tech} />
+    }, 
+   
+    {
+        title: "",
+        subtitle: "",
+        action: <NewsVGOgE24 kanal = {NewsSources.E24_BorsOgFinans} />
     }, 
     {
         title: "",
@@ -37,14 +50,11 @@ var data = [
         action: <FacebookContainer/>
     },
     {
-        title: "Kommende Arrangementer",
+        title: "",
         subtitle: "",
         action: <FacebookEventer/>
     },
    
-   
-   
-  
   ]
 
 export default data;

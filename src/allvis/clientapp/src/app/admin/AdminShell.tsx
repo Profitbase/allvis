@@ -50,12 +50,12 @@ class AdminShell extends Component<{},any>{
                     <label htmlFor="1">Dato</label>
                     </div>
                     <div className="md-radio">
-                    <input id="2" type="radio" name="g"></input>
-                    <label htmlFor="2">Klokkw</label>
+                    <input id="2" type="radio" name="g" checked ></input>
+                    <label htmlFor="2">Klokke</label>
                     </div>
-            
+           
 
-                    <div>
+                    
                     <table>
                     {showHideInput && (
                         <tr>
@@ -90,13 +90,7 @@ class AdminShell extends Component<{},any>{
                         </td>
                         </tr>
                     )}
-                    {showHideInput && showHideInput2 && (
-                        <tr>
-                        <td>
-                            <button>Submit</button>
-                        </td>
-                        </tr>
-                    )}
+                   
                     <tr>
                         <td>
                         <button onClick={() => this.hideComponent("showHideInput")}>
@@ -110,10 +104,18 @@ class AdminShell extends Component<{},any>{
                         </td>
                     </tr>
                     </table>
-                </div>
+
+                
+                        <tr>
+                        <td>
+                            <button>Submit</button>
+                        </td>
+                        </tr>
+                    
+               
             
                 </div> 
-                </div>
+            </div>
            
 
         );
@@ -122,10 +124,16 @@ class AdminShell extends Component<{},any>{
 
 export default AdminShell;
         <div>
-            <NewsVGOgE24 kanal = {NewsSources.VG_News}/>
+            <NewsNRK kanal = {NewsSources.NRK_sport} /> 
             <NewsNRK kanal = {NewsSources.NRK_News} />
             <NewsNRK kanal = {NewsSources.NRK_Rogaland} />
             <NewsVGOgE24 kanal = {NewsSources.E24_Aksjetips}/>
+            <NewsVGOgE24 kanal = {NewsSources.E24_BorsOgFinans}/>
+            <NewsVGOgE24 kanal = {NewsSources.VG_Tech}/>
+            <NewsVGOgE24 kanal = {NewsSources.VG_Sport}/>
+            <NewsVGOgE24 kanal = {NewsSources.VG_News}/>
         </div>
     
 
+
+    
