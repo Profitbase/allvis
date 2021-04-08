@@ -9,6 +9,25 @@ import {NewsNRK} from "./News/GetNewsNRK"
 
 var data = [
     {
+<<<<<<< Updated upstream
+=======
+        vgsporttitle: "VG SPORT:",
+        vgsport:  <NewsVGOgE24 kanal = {NewsSources.VG_Sport} />,
+        vgnyhetertitle: "VG NYHETER:",
+        vgnyheter: <NewsVGOgE24 kanal = {NewsSources.VG_News} />,
+        vgtechtitle: "VG TECH:",
+        vgtech:<NewsVGOgE24 kanal = {NewsSources.VG_Tech} />,
+        vgtechtitle2: "VG TECH:",
+        vgtech2:<NewsVGOgE24 kanal = {NewsSources.VG_Tech} />
+    }, 
+  
+    {
+        title: "",
+        subtitle: "",
+        action: <NewsVGOgE24 kanal = {NewsSources.VG_Sport} />
+    }, 
+    {
+>>>>>>> Stashed changes
         title: "",
         subtitle: "",
         action: <NewsNRK kanal = {NewsSources.NRK_News} />

@@ -17,8 +17,14 @@
     }
 
     img {
+<<<<<<< Updated upstream
         width: 30rem;
         height: 70%;
+=======
+        box-shadow: 0rem;
+        width: 50%;
+        height: 12rem;
+>>>>>>> Stashed changes
         position: relative;
     }
     h1 {
@@ -29,6 +35,7 @@
 }
 
 .ol {
+<<<<<<< Updated upstream
 	height: 20rem;
 	width: 80%;
 	position: absolute;
@@ -36,4 +43,12 @@
 	right: 12rem;
 	
 	
+=======
+	
+	width: 70%;
+	position: absolute;
+	top:2rem;
+	right: 20rem;
+
+>>>>>>> Stashed changes
 }

@@ -1,3 +1,6 @@
+$bgcolor1: #032341;
+
+
 .facebookContainer {
 	height: 70%;
 	width: 60%;
@@ -7,4 +10,76 @@
 	height: 70%;
 	width: 60%;
 	margin-top: 1rem;
+<<<<<<< Updated upstream
 }
+=======
+	h2 {
+		margin: 1rem;
+		
+        
+    }
+	
+}
+
+.place1 {
+	height: auto;
+	top: 2rem;
+	width: 70%;
+	position: absolute;
+	top:2rem;
+
+	h2{
+		color: $bgcolor1;
+		float:left;
+		left: 10rem;
+	}
+}
+.place2 {
+	height: auto;
+	width: 70%;
+	position: absolute;
+	top:2rem;
+	right: 20rem;
+	
+
+	h2{
+		color: $bgcolor1;
+		float:left;
+		left: 10rem;
+	}
+
+}
+.place3 {
+	height: auto;
+	width: 70%;
+	position: absolute;
+	top:30rem;
+	
+
+
+	h2{
+		color: $bgcolor1;
+		float:left;
+		left: 10rem;
+	}
+
+}
+.place4 {
+	height: auto;
+	width: 70%;
+	position: absolute;
+	top:30rem;
+	right: 20rem;
+
+	
+
+	h2{
+		color: $bgcolor1;
+		float:left;
+		left: 10rem;
+	}
+
+
+}
+
+>>>>>>> Stashed changes
