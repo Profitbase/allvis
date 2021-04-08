@@ -9,8 +9,6 @@ import {NewsNRK} from '../slideShow/News/GetNewsNRK'
 import NewsSources from '../slideShow/News/NewsSources'
 
 import React, { Component } from 'react';
-import { Card, FormControl, FormLabel, ListGroup } from 'react-bootstrap';
-
 
 
 class AdminShell extends Component<{},any>{
