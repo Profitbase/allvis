@@ -1,9 +1,6 @@
 import * as React from 'react'
-<<<<<<< Updated upstream
-=======
 import styles from "./SlideContentStyle.module.scss"
 import cx from 'classnames'
->>>>>>> Stashed changes
 
 export const SlideShowShell = ({slides}:{[key:string]:any}) => {
     const [curr, setCurr] = React.useState(0);
@@ -26,14 +23,6 @@ export const SlideShowShell = ({slides}:{[key:string]:any}) => {
       {slides.map((s, i) => (
         <div className={i === curr ? "slide active" : "slide"} key={s.title}>
           <div>
-<<<<<<< Updated upstream
-      <h1>{s.title}</h1> 
-      <h2>{s.subtitle}</h2>
-      <section>{s.action}</section>
-
-      </div>
-      
-=======
           <div className={cx(styles.place1)} >
           <h2>{s.vgnyhetertitle}</h2>
           <section>{s.vgnyheter}</section>
@@ -55,7 +44,6 @@ export const SlideShowShell = ({slides}:{[key:string]:any}) => {
           <section>{s.action}</section> 
           </div>
      
->>>>>>> Stashed changes
         </div>
       ))}
     </section>

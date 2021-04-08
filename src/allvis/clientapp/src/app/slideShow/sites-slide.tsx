@@ -9,8 +9,6 @@ import {NewsNRK} from "./News/GetNewsNRK"
 
 var data = [
     {
-<<<<<<< Updated upstream
-=======
         vgsporttitle: "VG SPORT:",
         vgsport:  <NewsVGOgE24 kanal = {NewsSources.VG_Sport} />,
         vgnyhetertitle: "VG NYHETER:",
@@ -27,7 +25,6 @@ var data = [
         action: <NewsVGOgE24 kanal = {NewsSources.VG_Sport} />
     }, 
     {
->>>>>>> Stashed changes
         title: "",
         subtitle: "",
         action: <NewsNRK kanal = {NewsSources.NRK_News} />
@@ -60,23 +57,9 @@ var data = [
         subtitle: "",
         action: <FacebookEventer/>
     },
-<<<<<<< HEAD
-  
-    {
-        title: "",
-        subtitle: "LinkedIn",
-        action: <Linkdin/>
-    }, 
-    {
-        title: "",
-        subtitle: "I dag er det fint vær",
-        action: ""
-    }, 
-=======
    
    
    
->>>>>>> main
   
   ]
 
