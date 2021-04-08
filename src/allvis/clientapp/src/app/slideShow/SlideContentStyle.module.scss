@@ -4,7 +4,9 @@ $bgcolor1: #032341;
 .facebookContainer {
 	height: 70%;
 	width: 60%;
-	margin-top: 3rem;
+	margin-top: 1rem;
+	left: 10rem;
+	float: left;
 }
 .facebookEventer {
 	height: 70%;
@@ -23,7 +25,7 @@ $bgcolor1: #032341;
 	top: 2rem;
 	width: 70%;
 	position: absolute;
-	top:2rem;
+	
 
 	h2{
 		color: $bgcolor1;

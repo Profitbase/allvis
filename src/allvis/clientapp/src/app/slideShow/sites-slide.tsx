@@ -11,33 +11,19 @@ var data = [
         vgsport:  <NewsVGOgE24 kanal = {NewsSources.VG_Sport} />,
         vgnyhetertitle: "VG NYHETER:",
         vgnyheter: <NewsVGOgE24 kanal = {NewsSources.VG_News} />,
-        vgtechtitle: "VG TECH:",
-        vgtech:<NewsVGOgE24 kanal = {NewsSources.VG_Tech} />,
-        vgtechtitle2: "VG TECH:",
-        vgtech2:<NewsVGOgE24 kanal = {NewsSources.VG_Tech} />
+        vgtechtitle: "E24 AKSJETIPS:",
+        vgtech:<NewsVGOgE24 kanal = {NewsSources.E24_Aksjetips}/>,
+        vgtechtitle2: "E24 BØRS OG FINANS:",
+        vgtech2:<NewsVGOgE24 kanal = {NewsSources.E24_BorsOgFinans} />
     }, 
-  
-    {
-        title: "",
-        subtitle: "",
-        action: <NewsVGOgE24 kanal = {NewsSources.VG_Sport} />
-    }, 
+ 
+
     {
         title: "",
         subtitle: "",
         action: <NewsVGOgE24 kanal = {NewsSources.VG_Tech} />
     }, 
    
-    {
-        title: "",
-        subtitle: "",
-        action: <NewsVGOgE24 kanal = {NewsSources.E24_BorsOgFinans} />
-    }, 
-    {
-        title: "",
-        subtitle: "",
-        action: <NewsVGOgE24 kanal = {NewsSources.E24_Aksjetips}/>
-    }, 
   
     {
         title: "",
