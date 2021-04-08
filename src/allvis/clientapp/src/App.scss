@@ -47,7 +47,6 @@ body {
 }
 .slide {
     position: absolute;
-    top: 0;
     left: 2rem;
     width: 100%;
     height: 100%;
@@ -56,6 +55,8 @@ body {
     align-items: center;
     opacity: 0;
     transition: 0.3s ease;
+    top: 1rem;
+
     
    
     h1 {
@@ -64,10 +65,9 @@ body {
     }
     h2 {
         color: $bgcolor1;
-        margin-bottom: 16rem;
+        margin-bottom: 31rem;
         font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Calibri, sans-serif;
-        
-       
+      
     }
 }
 .slide.active {
@@ -75,14 +75,14 @@ body {
     transition-duration: 0.2s;
     background-color: white;
     position: absolute;
-    top: 1rem;
     left: 30rem;
     width: 75%;
     float: right;
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    margin-top: 3rem;
+    top: 1rem;
+ 
    
 }
 @media (prefers-reduced-motion: no-preference) {
