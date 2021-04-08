@@ -52,27 +52,19 @@ body {
     align-items: center;
     opacity: 0;
     transition: 0.3s ease;
-<<<<<<< Updated upstream
-=======
     top: 1rem;
 
     
    
->>>>>>> Stashed changes
     h1 {
         top: 2rem;
         color: #032341;
     }
     h2 {
-<<<<<<< Updated upstream
-        top: 2rem;
-        color: #032341;
-=======
         color: $bgcolor1;
         margin-bottom: 31rem;
         font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Calibri, sans-serif;
       
->>>>>>> Stashed changes
     }
 }
 .slide.active {
@@ -86,13 +78,9 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-<<<<<<< Updated upstream
-    margin-top: 1rem;
-=======
     top: 1rem;
  
    
->>>>>>> Stashed changes
 }
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
