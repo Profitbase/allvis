@@ -48,12 +48,12 @@ namespace allvis.Controllers
 
                 for (int i = 0; i < _amountOfPost; i++)
                 {
-                    if(posts.data[i].full_picture == null)
+                    if (posts.data[i].full_picture == null)
                     {
                         postlist.Add(new FacebookDataDto
                         {
                             message = posts.data[i].message
-                        
+
                         });
                     }
                     else
@@ -66,7 +66,7 @@ namespace allvis.Controllers
 
                     };
                 }
-                               
+
                 return postlist;
 
             }
