@@ -3,9 +3,8 @@ import { Navbar, Nav, Form, Button } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
 
-
-
-const Navigation = (props: any) => {
+/**
+ const Navigation = (props: any) => {
     console.log(props);
     return (
         <Navbar bg="primary" variant="dark">
@@ -22,3 +21,6 @@ const Navigation = (props: any) => {
 }
 
 export default withRouter(Navigation);
+ */
+
+

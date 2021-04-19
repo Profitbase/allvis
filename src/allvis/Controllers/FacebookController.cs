@@ -1,12 +1,12 @@
 ﻿using allvis.Controllers.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Threading.Tasks;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace allvis.Controllers
 {
@@ -16,9 +16,11 @@ namespace allvis.Controllers
     {
         private readonly HttpClient _client;
 
-        private readonly string COMPANYID = "";
+        private readonly string COMPANYID = "104301561786409";
 
-        private string _bearerToken = "";
+        private string _bearerToken = "EAAFwlwGswr4BALvNeZBinGEP8arF4GYYWzz2xAjZChOeqWa8r8fZC1QI6OP9czSAJysrSPQepb5AipJRQ9bleLAJNUWZCS7YsEngGX2sJPCRKmaxZAWr4WBmdH6AdyJelqeN6dNqLBM6V0xHQnlehJ8gZCkJd6dfza1p4gZAgSVqgZDZD";
+
+        private int _amountOfPost = 2;
 
 
         public FacebookController(IHttpClientFactory clientFactory)
@@ -28,52 +30,49 @@ namespace allvis.Controllers
         }
 
 
-        // GET: api/<FacebookAPI>
+        // GET: api/<TwitterAPI>
         [HttpGet]
-        public async Task<FacebookDataDto> Get()
+        public async Task<List<FacebookDataDto>> Get()
         {
-            var url = $"";
+            var url = $"https://graph.facebook.com/{COMPANYID}/feed?fields=full_picture,message";
             var response = await _client.GetAsync(url);
 
-            var res = response.Content.ReadAsStringAsync();
-
-            var tweets = JsonSerializer.Deserialize<FacebookAPIResponse>(await response.Content.ReadAsStringAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-
-            return new FacebookDataDto()
+            try
             {
-                text = tweets.data[1].text,
-                medium = tweets.includes.media[0].url,
-                type = GetMediaType(tweets.includes.media[0].type)
-            };
+                var facebook = await response.Content.ReadAsStringAsync();
+                var posts = JsonSerializer.Deserialize<FacebookAPIResponse>(facebook, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                var postlist = new List<FacebookDataDto>();
+
+                for (int i = 0; i < _amountOfPost; i++)
+                {
+                    if(posts.data[i].full_picture == null)
+                    {
+                        postlist.Add(new FacebookDataDto
+                        {
+                            message = posts.data[i].message
+                        
+                        });
+                    }
+                    else
+                    {
+                        postlist.Add(new FacebookDataDto
+                        {
+                            message = posts.data[i].message,
+                            full_picture = posts.data[i].full_picture
+                        });
+
+                    };
+                }
+                               
+                return postlist;
+
+            }
+            catch (System.Exception ex)
+            {
+
+                throw;
+            }
         }
-
-
-        private string GetMediaType(string type)
-        {
-            string mediaType;
-
-            if (type == "photo")
-            {
-                mediaType = "photo";
-            }
-            else if (type == "video")
-            {
-                mediaType = "video";
-            }
-            else
-            {
-                mediaType = null;
-            }
-            return mediaType;
-        }
-
-
-
-
-
-
-
     }
 
 }
-
