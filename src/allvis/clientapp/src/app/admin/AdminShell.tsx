@@ -9,6 +9,10 @@ import {NewsNRK} from '../slideShow/News/GetNewsNRK'
 import NewsSources from '../slideShow/News/NewsSources'
 
 import React, { Component } from 'react';
+<<<<<<< HEAD
+=======
+//import { Card, FormControl, FormLabel, ListGroup } from 'react-bootstrap';
+>>>>>>> Lagt til bruk av Facebook API
 
 
 class AdminShell extends Component<{},any>{
@@ -32,6 +36,7 @@ class AdminShell extends Component<{},any>{
           
         }
       }
+
     render() {
         const { showHideInput, showHideInput2 } = this.state;
         return (
@@ -51,8 +56,6 @@ class AdminShell extends Component<{},any>{
                     <input id="2" type="radio" name="g" checked ></input>
                     <label htmlFor="2">Klokke</label>
                     </div>
-           
-
                     
                     <table>
                     {showHideInput && (
@@ -102,16 +105,11 @@ class AdminShell extends Component<{},any>{
                         </td>
                     </tr>
                     </table>
-
-                
                         <tr>
                         <td>
                             <button>Submit</button>
                         </td>
                         </tr>
-                    
-               
-            
                 </div> 
             </div>
            
