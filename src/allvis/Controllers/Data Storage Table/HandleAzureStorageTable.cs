@@ -8,7 +8,7 @@ using CloudTableClient = Microsoft.Azure.Cosmos.Table.CloudTableClient;
 
 namespace allvis.Controllers.Data_Storage_Table
 {
-   
+
     public class HandleAzureStorageTable
     {
         private static HandleAzureStorageTable instance = null;
@@ -57,7 +57,7 @@ namespace allvis.Controllers.Data_Storage_Table
             }
         }
 
-        public async Task<GetFacebookAndTwitterEntity> AmountOfPosts (string ID, string city)
+        public async Task<GetFacebookAndTwitterEntity> AmountOfPosts(string ID, string city)
         {
             TableOperation retrieveOperation = TableOperation.Retrieve<GetFacebookAndTwitterEntity>(ID, city);
             TableResult result = await informationboard.ExecuteAsync(retrieveOperation);
@@ -92,7 +92,7 @@ namespace allvis.Controllers.Data_Storage_Table
 
     }
 
-    public class UpdateTable : TableEntity  
+    public class UpdateTable : TableEntity
     {
         public double amountOfPostsFacebook { get; set; }
         public double amountOfPostsTwitter { get; set; }
