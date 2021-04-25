@@ -1,4 +1,5 @@
-﻿using allvis.Controllers.Dtos;
+﻿using allvis.Controllers.Data_Storage_Table;
+using allvis.Controllers.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -27,8 +28,10 @@ namespace allvis.Controllers
         {
             _client = clientFactory.CreateClient();
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _bearerToken);
-        }
 
+            _amountOfPost = HandleAzureStorageTable.GetInstance.AmountOfPosts("1", "Sandnes").Result.AmountOfPostsFacebook;
+
+        }
 
         // GET: api/<TwitterAPI>
         [HttpGet]

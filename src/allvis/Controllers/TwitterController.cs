@@ -1,4 +1,5 @@
-﻿using allvis.Controllers.Dtos;
+﻿using allvis.Controllers.Data_Storage_Table;
+using allvis.Controllers.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -22,13 +23,15 @@ namespace allvis.Controllers
 
         private  string _bearerToken = "AAAAAAAAAAAAAAAAAAAAAE0tMwEAAAAAI2QW%2FZmImgXvGvH%2BJRGS9pOyE%2FI%3DfX8cXrY5VgD9Ka68WZmogFCM2NWRSu7TwSl9IVLLGAAfw5Qyih";
 
-        private int _amountOfTweets = 2;
+        private int _amountOfTweets;
 
 
         public TwitterController(IHttpClientFactory clientFactory)
         {
             _client = clientFactory.CreateClient();
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _bearerToken);
+
+            _amountOfTweets = HandleAzureStorageTable.GetInstance.AmountOfPosts("1", "Sandnes").Result.AmountOfPostsTwitter;
         }
 
 
@@ -59,12 +62,7 @@ namespace allvis.Controllers
                         });
                     };
                 }
-                foreach(var tweet in tweetlist)
-                {
-
-                }
-
-
+                
                 return tweetlist;
                 
             }
