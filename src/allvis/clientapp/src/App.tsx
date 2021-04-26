@@ -6,7 +6,7 @@ import { Informationboard } from './app/slideShow/Informationboard/Informationbo
 //import { Button } from 'react-bootstrap';
 //import Navigation from './app/admin/navbar';
 //import Routes from "./app/admin/Routes"
-import AdminShell from "./app/admin/AdminShell";
+import {AdminShell} from "./app/admin/AdminShell";
 
 
 
@@ -15,9 +15,9 @@ function App() {
     <div className="App">
        
     <main>  
-    {  /* <AdminShell/>*/ } 
-     <Informationboard/>
-      <SlideShowShell slides = {defaultSlides}/> 
+       <AdminShell/>
+      {/* <Informationboard/>
+      <SlideShowShell slides = {defaultSlides}/> */ }
 
     </main>
     </div>
