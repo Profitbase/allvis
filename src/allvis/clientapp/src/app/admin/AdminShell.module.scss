@@ -55,11 +55,12 @@ img {
 
 }
 .text{
-	position: absolute;
-	text-align: center;
-	color: red;
+	position:absolute;
+	text-align:initial;
+	color: $bgcolor1;
 	top: 20rem;
 	z-index: 1;
-	display: left;
-	
+	display: center;
+	line-height: 2.6875rem;	
+
 }

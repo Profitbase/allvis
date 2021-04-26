@@ -9,10 +9,8 @@ import {NewsNRK} from '../slideShow/News/GetNewsNRK'
 import NewsSources from '../slideShow/News/NewsSources'
 
 import React, { Component } from 'react';
-<<<<<<< HEAD
-=======
 //import { Card, FormControl, FormLabel, ListGroup } from 'react-bootstrap';
->>>>>>> Lagt til bruk av Facebook API
+
 
 
 class AdminShell extends Component<{},any>{
@@ -24,112 +22,75 @@ class AdminShell extends Component<{},any>{
         };
         this.hideComponent = this.hideComponent.bind(this);
       }
-    
-      hideComponent(name: string) {
-        switch (name) {
-          case "showHideInput":
-            this.setState({ showHideInput: !this.state.showHideInput });
-            break;
-          case "showHideInput2":
-            this.setState({ showHideInput2: !this.state.showHideInput2 });
-            break;
-          
-        }
-      }
 
-    render() {
-        const { showHideInput, showHideInput2 } = this.state;
-        return (
-            <div style={{ display: 'flex', justifyContent: 'center', padding: 30 }}>
+export const AdminShell = () => {
+    
+    const [showHideInput,setShowHideInput] = useState(true)
+    const [showHideInput2,setShowHideLName] = useState(true)
+    return (
+        <div style={{ display: 'flex', justifyContent: 'center', padding: 30 }}>
                 <div className={cx(styles.informationboard)}>
                 <img className={cx(styles.logo)} src={logo} alt="Logo" />
                     <h1 className={cx(styles.title)}>ALLVIS ADMIN SIDE</h1>
-                
                 </div>
-                <div className={cx(styles.text)}>
-                    <h2>Administrer lysbildefremvisningen</h2>
-                    <div className="md-radio">
-                    <input id="1" type="radio" name="g" checked></input>
-                    <label htmlFor="1">Dato</label>
-                    </div>
-                    <div className="md-radio">
-                    <input id="2" type="radio" name="g" checked ></input>
-                    <label htmlFor="2">Klokke</label>
-                    </div>
-                    
-                    <table>
-                    {showHideInput && (
-                        <tr>
-                        <td>Været :</td>
-                        <td>
-                            <input type="text" id="Input" />
-                        </td>
-                        </tr>
-                    )}
-                    {showHideInput2 && (
-                        <tr>
-                            <td>Lunsj :</td>
-                        <td>Mandag :</td>
-                        <td>
-                            <input type="text" id="Input2" />
-                        </td>
-                        <td>Tirsdag :</td>
-                        <td>
-                            <input type="text" id="Input2" />
-                        </td>
-                        <td>Onsdag :</td>
-                        <td>
-                            <input type="text" id="Input2" />
-                        </td>
-                        <td>Torsdag :</td>
-                        <td>
-                            <input type="text" id="Input2" />
-                        </td>
-                        <td>Fredag :</td>
-                        <td>
-                            <input type="text" id="Input2" />
-                        </td>
-                        </tr>
-                    )}
-                   
-                    <tr>
-                        <td>
-                        <button onClick={() => this.hideComponent("showHideInput")}>
-                            Været
-                        </button>
-                        </td>
-                        <td>
-                        <button onClick={() => this.hideComponent("showHideInput2")}>
-                            Lunsj
-                        </button>
-                        </td>
-                    </tr>
-                    </table>
-                        <tr>
-                        <td>
-                            <button>Submit</button>
-                        </td>
-                        </tr>
-                </div> 
-            </div>
-           
+                    <div className={cx(styles.text)}>
+                        <h2>Administrer lysbildefremvisningen</h2>
+                        <div className="md-radio">
+                            <input id="1" type="radio" name="g" checked></input>
+                            <label htmlFor="1">Dato</label>
+                        </div>
+                        <div className="md-radio">
+                            <input id="2" type="radio" name="g" checked ></input>
+                            <label htmlFor="2">Klokke</label>
+                        </div>
+                    <div>
+            {showHideInput && (
+            <tr>
+            <td>Værlokasjon :</td>
+            <td>
+            <input type="text" id="Input" />
+            </td>
+            </tr>
+            )}
+        {showHideInput2 && (
+        <tr>
+        <td>Lunsj:</td>
+        <td>Mandag:</td>
+        <input type="text" id="Input2" />
+       
+        <td>Tirsdag :</td>
+        <input type="text" id="Input2" />
+        
+        <td>Onsdag :</td>
+        <td>
+        <input type="text" id="Input2" />
+        </td>
+        
+        <td>Torsdag :</td>
+        <td>
+        <input type="text" id="Input2" />
+        </td>
+        <td>Fredag :</td>
+        <td>
+        <input type="text" id="Input2" />
+        </td>
+        </tr>
+        )} 
 
-        );
-       }
-    }
-
-export default AdminShell;
-        <div>
-            <NewsNRK kanal = {NewsSources.NRK_sport} /> 
-            <NewsNRK kanal = {NewsSources.NRK_News} />
-            <NewsNRK kanal = {NewsSources.NRK_Rogaland} />
-            <NewsVGOgE24 kanal = {NewsSources.E24_Aksjetips}/>
-            <NewsVGOgE24 kanal = {NewsSources.E24_BorsOgFinans}/>
-            <NewsVGOgE24 kanal = {NewsSources.VG_Tech}/>
-            <NewsVGOgE24 kanal = {NewsSources.VG_Sport}/>
-            <NewsVGOgE24 kanal = {NewsSources.VG_News}/>
+        <tr>
+        <td>
+        <button onClick={()=>setShowHideInput(!showHideInput)}>Været</button>
+        </td>
+        <td>
+        <button onClick={()=>setShowHideLName(!showHideInput2)}>Lunsj</button>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <button>Submit</button>
+        </td>
+        </tr>
         </div>
-    
-
-
-    
+        </div>
+        </div>
+)} 
