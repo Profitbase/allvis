@@ -12,6 +12,7 @@ import React, { Component } from 'react';
 //import { Card, FormControl, FormLabel, ListGroup } from 'react-bootstrap';
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> Lagt til bruk av Facebook API
 
@@ -29,10 +30,16 @@ class AdminShell extends Component<{},any>{
 export const AdminShell = () => {
     
 <<<<<<< HEAD
+=======
+
+export const AdminShell = () => {
+    
+>>>>>>> update admin
     const [showHideInput,setShowHideInput] = useState(true)
     const [showHideInput2,setShowHideLName] = useState(true)
     return (
         <div style={{ display: 'flex', justifyContent: 'center', padding: 30 }}>
+<<<<<<< HEAD
 =======
       hideComponent(name: string) {
         switch (name) {
@@ -51,11 +58,16 @@ export const AdminShell = () => {
         return (
             <div style={{ display: 'flex', justifyContent: 'center', padding: 30 }}>
 >>>>>>> Lagt til bruk av Facebook API
+=======
+>>>>>>> update admin
                 <div className={cx(styles.informationboard)}>
                 <img className={cx(styles.logo)} src={logo} alt="Logo" />
                     <h1 className={cx(styles.title)}>ALLVIS ADMIN SIDE</h1>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> update admin
                     <div className={cx(styles.text)}>
                         <h2>Administrer lysbildefremvisningen</h2>
                         <div className="md-radio">
@@ -99,6 +111,7 @@ export const AdminShell = () => {
         </td>
         </tr>
         )} 
+<<<<<<< HEAD
 =======
                 <div className={cx(styles.text)}>
                     <h2>Administrer lysbildefremvisningen</h2>
@@ -173,6 +186,9 @@ export const AdminShell = () => {
     }
 >>>>>>> Lagt til bruk av Facebook API
 
+=======
+
+>>>>>>> update admin
         <tr>
         <td>
         <button onClick={()=>setShowHideInput(!showHideInput)}>Været</button>
