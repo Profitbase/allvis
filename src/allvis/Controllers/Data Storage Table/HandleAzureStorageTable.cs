@@ -26,7 +26,7 @@ namespace allvis.Controllers.Data_Storage_Table
 
         private HandleAzureStorageTable()
         {
-            var storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=allvis01;AccountKey=YrmqYR5ZCMiDK2zYRxW9kmBkP6IbwIYdRtac/SvVQ4m/kpSkyG+wrjAz6toc6yLekX0TfZO+DVvkscGes1GgDA==;EndpointSuffix=core.windows.net";
+            var storageConnectionString = "";
             var tablename = "InformationBoard";
 
             //Cretaing storage account for connectivity
