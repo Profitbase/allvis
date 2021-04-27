@@ -1,49 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace allvis.Controllers.Dtos
 {
-
     public class FacebookAPIResponse
     {
-        public List<FacebookDatum> data { get; set; }
-        public FacebookIncludes includes { get; set; }
-        public FacebookMeta meta { get; set; }
+        public FacebookDatum[] data { get; set; }
+        public Paging paging { get; set; }
     }
 
-    public class FacebookIncludes
+    public class Paging
     {
-        public List<FacebookMedium> media { get; set; }
+        public Cursors cursors { get; set; }
     }
 
-    public class FacebookMedium
+    public class Cursors
     {
-        public string media_key { get; set; }
-        public string type { get; set; }
-        public string url { get; set; }
-        public string preview_image_url { get; set; }
-    }
-
-    public class FacebookMeta
-    {
-        public string oldest_id { get; set; }
-        public string newest_id { get; set; }
-        public int result_count { get; set; }
-        public string next_token { get; set; }
+        public string before { get; set; }
+        public string after { get; set; }
     }
 
     public class FacebookDatum
     {
+        public string full_picture { get; set; }
+        public string message { get; set; }
         public string id { get; set; }
-        public string text { get; set; }
-        public FacebookAttachments attachments { get; set; }
     }
-
-    public class FacebookAttachments
-    {
-        public string[] media_keys { get; set; }
-    }
-
 }
