@@ -25,16 +25,16 @@ var data = [
         action: <NewsVGOgE24 kanal = {NewsSources.VG_Tech} />
     }, 
     {
-      title: "",
-      subtitle:"",
-      action: <Facebook/>,
+        title: "",
+        subtitle:"",
+        action: <Twitter/>,
       
     }, 
 
     {
-    title: "",
-    subtitle:"",
-    action: <Facebook/>,
+        title: "",
+        subtitle:"",
+        action: <Facebook/>,
     
     }, 
  
