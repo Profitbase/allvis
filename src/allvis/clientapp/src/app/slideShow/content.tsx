@@ -83,26 +83,5 @@ export const TwitterContainer = () => {
   };
 
 
-  export const YammerContainer = () => {
-    useEffect(() => {
-      const anchor = document.createElement("a");
-      anchor.setAttribute("class", "embedded-feed");
-     
-      anchor.setAttribute("href", "");
-      anchor.setAttribute("data-height", "700px"); 
-      anchor.setAttribute("data-width", "500px");  
-      document.getElementsByClassName("yammer-embed")[0].appendChild(anchor);
-      
-      const script = document.createElement("script");
-      script.setAttribute("src", "https://c64.assets-yammer.com/assets/platform_embed.js");
-      document.getElementsByClassName("yammer-embed")[0].appendChild(script);
-    }, []);
-    
-    return (
-      <section className={cx(styles.yammerContainer)}>
-        <div className="yammer-embed"></div>
-      </section>
-      
-    );
-  };
+  
 

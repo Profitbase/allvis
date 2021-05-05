@@ -26,7 +26,7 @@ namespace allvis.Controllers.Data_Storage_Table
 
         private HandleAzureStorageTable()
         {
-            var storageConnectionString = "";
+            var storageConnectionString = "222";
             var tablename = "InformationBoard";
 
             //Cretaing storage account for connectivity

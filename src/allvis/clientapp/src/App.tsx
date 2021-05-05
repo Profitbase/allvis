@@ -11,9 +11,9 @@ function App() {
     <div className="App">
        
     <main>  
-       <AdminShell/>
-      {/* <Informationboard/>
-      <SlideShowShell slides = {defaultSlides}/> */ }
+      {/* <AdminShell/>*/ }
+       <Informationboard/>
+      <SlideShowShell slides = {defaultSlides}/> 
 
     </main>
     </div>
