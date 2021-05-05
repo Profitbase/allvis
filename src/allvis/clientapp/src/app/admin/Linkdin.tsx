@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import ILinkdinDto from './ILinkdinDto';
+import ILinkdinDto from './IDatabaseDto';
 import styles from "../slideShow/TwitterAPI/Twitter.module.scss"
 import cx from "classnames"
 
@@ -28,7 +28,7 @@ export const Linkdin = () => {
 
     return( 
         <div className={cx(styles.twitter, styles.pa)}>
-            <p>{tweets?.text}</p>
+            <p>{tweets?.lunchMonday}</p>
            
 
         </div>

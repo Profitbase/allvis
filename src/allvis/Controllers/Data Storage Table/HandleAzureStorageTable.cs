@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Threading.Tasks;
+using System.Web.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Azure.Cosmos.Table;
 using Microsoft.Extensions.Hosting;
@@ -8,12 +9,13 @@ using CloudTableClient = Microsoft.Azure.Cosmos.Table.CloudTableClient;
 
 namespace allvis.Controllers.Data_Storage_Table
 {
-   
+    
     public class HandleAzureStorageTable
     {
+        
         private static HandleAzureStorageTable instance = null;
 
-        private static CloudTable informationboard;
+        private static CloudTable allvis;
         public static HandleAzureStorageTable GetInstance
         {
             get
@@ -26,8 +28,8 @@ namespace allvis.Controllers.Data_Storage_Table
 
         private HandleAzureStorageTable()
         {
-            var storageConnectionString = "";
-            var tablename = "InformationBoard";
+            var storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=allvisdatabase;AccountKey=bjmhQAtIq2Z+OBzZnNxEbnOctOATfwMD1aiYnEM2IjfX4D7McU5YyXc6RsTeWtVhhjosRStmh077tXzE3FK58w==;EndpointSuffix=core.windows.net";
+            var tablename = "allvis";
 
             //Cretaing storage account for connectivity
             CloudStorageAccount storageAccount;
@@ -37,17 +39,17 @@ namespace allvis.Controllers.Data_Storage_Table
             CloudTableClient tableClient = storageAccount.CreateCloudTableClient(new TableClientConfiguration());
             CloudTable table = tableClient.GetTableReference(tablename);
 
-            informationboard = table;
+            allvis = table;
         }
 
-
+       
         public static async Task MergeUser(UpdateTable entity)
         {
             try
             {
                 TableOperation insertOrMergeOperation = TableOperation.InsertOrMerge(entity);
 
-                TableResult result = await informationboard.ExecuteAsync(insertOrMergeOperation);
+                TableResult result = await allvis.ExecuteAsync(insertOrMergeOperation);
                 UpdateTable insertedEntity = result.Result as UpdateTable;
             }
             catch (System.Exception ex)
@@ -60,7 +62,7 @@ namespace allvis.Controllers.Data_Storage_Table
         public async Task<GetFacebookAndTwitterEntity> AmountOfPosts (string ID, string city)
         {
             TableOperation retrieveOperation = TableOperation.Retrieve<GetFacebookAndTwitterEntity>(ID, city);
-            TableResult result = await informationboard.ExecuteAsync(retrieveOperation);
+            TableResult result = await allvis.ExecuteAsync(retrieveOperation);
             GetFacebookAndTwitterEntity amount = result.Result as GetFacebookAndTwitterEntity;
 
             return amount;
@@ -69,7 +71,7 @@ namespace allvis.Controllers.Data_Storage_Table
         public async Task<GetTheWeekLunch> GetLunch(string ID, string city)
         {
             TableOperation retrieveOperation = TableOperation.Retrieve<GetTheWeekLunch>(ID, city);
-            TableResult result = await informationboard.ExecuteAsync(retrieveOperation);
+            TableResult result = await allvis.ExecuteAsync(retrieveOperation);
             GetTheWeekLunch lunch = result.Result as GetTheWeekLunch;
 
             return lunch;

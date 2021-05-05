@@ -1,84 +1,62 @@
+import React, { Component } from "react";
+import { useState } from "react";
+import { Grid, TextField, Button, Typography } from "@material-ui/core";
 
-import cx from 'classnames'
-import styles from "./AdminShell.module.scss"
-import logo from './logo.svg'
+export const AdminShell= () => {
+    const [lunchMonday, setlunchMonday] = useState<string>();
+    const [lunchTuesday, setlunchTuesday] = useState<string>();
+    const [lunchWensday, setlunchWensday] = useState<string>();
+    const [lunchThursday, setlunchThursday] = useState<string>();
 
-import { useState, useEffect } from 'react'
-import {NewsVGOgE24} from '../slideShow/News/GetNewsVGogE24'
-import {NewsNRK} from '../slideShow/News/GetNewsNRK'
-import NewsSources from '../slideShow/News/NewsSources'
-import React, { Component } from 'react';
-//import { Card, FormControl, FormLabel, ListGroup } from 'react-bootstrap';
+    const post = () => {
+        const requestOptions = {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                lunchMonday: lunchMonday,
+                lunchTuesday: lunchTuesday,
+                lunchWensday: lunchWensday,
+                lunchThursday: lunchThursday
+            }),
+            
+        };
 
-
-export const AdminShell = () => {
-    
-    const [showHideInput,setShowHideInput] = useState(true)
-    const [showHideInput2,setShowHideLName] = useState(true)
-    return (
-        <div style={{ display: 'flex', justifyContent: 'center', padding: 30 }}>
-                <div className={cx(styles.informationboard)}>
-                <img className={cx(styles.logo)} src={logo} alt="Logo" />
-                    <h1 className={cx(styles.title)}>ALLVIS ADMIN SIDE</h1>
-                </div>
-                    <div className={cx(styles.text)}>
-                        <h2>Administrer lysbildefremvisningen</h2>
-                        <div className="md-radio">
-                            <input id="1" type="radio" name="g" checked></input>
-                            <label htmlFor="1">Dato</label>
-                        </div>
-                        <div className="md-radio">
-                            <input id="2" type="radio" name="g" checked ></input>
-                            <label htmlFor="2">Klokke</label>
-                        </div>
-                    <div>
-            {showHideInput && (
-            <tr>
-            <td>Værlokasjon :</td>
-            <td>
-            <input type="text" id="Input" />
-            </td>
-            </tr>
-            )}
-        {showHideInput2 && (
-        <tr>
-        <td>Lunsj:</td>
-        <td>Mandag:</td>
-        <input type="text" id="Input2" />
        
-        <td>Tirsdag :</td>
-        <input type="text" id="Input2" />
         
-        <td>Onsdag :</td>
-        <td>
-        <input type="text" id="Input2" />
-        </td>
         
-        <td>Torsdag :</td>
-        <td>
-        <input type="text" id="Input2" />
-        </td>
-        <td>Fredag :</td>
-        <td>
-        <input type="text" id="Input2" />
-        </td>
-        </tr>
-        )} 
+        fetch(`api/Database`, requestOptions)
+            .then((response) => response.text())
+            .then((data) => {
 
-        <tr>
-        <td>
-        <button onClick={()=>setShowHideInput(!showHideInput)}>Været</button>
-        </td>
-        <td>
-        <button onClick={()=>setShowHideLName(!showHideInput2)}>Lunsj</button>
-        </td>
-        </tr>
-        <tr>
-        <td>
-        <button>Submit</button>
-        </td>
-        </tr>
+            })
+    }
+
+    return (
+        <div>
+            <body>
+                <form action="#" method="POST">
+                    <TextField onChange={(e) => setlunchMonday(e.target.value)}> </TextField>
+                    <br>
+                    </br>
+                    <TextField onChange={(e) => setlunchTuesday(e.target.value)}> </TextField>
+                    <br>
+                    </br>
+                    <TextField onChange={(e) => setlunchWensday(e.target.value)}> </TextField>
+                    <br>
+                    </br>
+                    <TextField onChange={(e) => setlunchThursday(e.target.value)}> </TextField>
+                    <br>
+                    </br>
+                    <Button onClick={() => post()}> Legg til</Button>
+                </form>
+            </body>
         </div>
-        </div>
-        </div>
-)} 
+    );
+}
+
+
+
+function requestOptions(arg0: string, requestOptions: any) {
+    throw new Error("Function not implemented.");
+}
+
