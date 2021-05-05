@@ -1,5 +1,5 @@
 import { Twitter} from "./TwitterAPI/Twitter";
-import {FacebookContainer, FacebookEventer} from "./content"
+import {FacebookEventer} from "./content"
 import {Linkdin} from "../admin/Linkdin"
 import {NewsVGOgE24} from "./News/GetNewsVGogE24"
 import NewsSources from "./News/NewsSources";
