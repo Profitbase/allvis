@@ -7,9 +7,9 @@ namespace allvis.Controllers.Dtos
 {
     public class FacebookDataDto
     {
-        public string text { get; set; }
-        public string medium { get; set; }
-        public string type { get; set; }
+        public string message { get; set; }
+        public string full_picture { get; set; }
+        public string id { get; set; }
 
     }
 }

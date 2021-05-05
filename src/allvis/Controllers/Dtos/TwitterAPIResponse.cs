@@ -8,14 +8,14 @@ namespace allvis.Controllers.Dtos
 
     public class TwitterAPIResponse
     {
-        public List <Datum> data { get; set; }
+        public List<Datum> data { get; set; }
         public Includes includes { get; set; }
         public Meta meta { get; set; }
     }
 
     public class Includes
     {
-        public List <Medium> media { get; set; }
+        public List<Medium> media { get; set; }
     }
 
     public class Medium
@@ -34,7 +34,7 @@ namespace allvis.Controllers.Dtos
         public string next_token { get; set; }
     }
 
-    public class Datum
+    public partial class Datum
     {
         public string id { get; set; }
         public string text { get; set; }

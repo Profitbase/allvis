@@ -4,6 +4,7 @@ import {Linkdin} from "../admin/Linkdin"
 import {NewsVGOgE24} from "./News/GetNewsVGogE24"
 import NewsSources from "./News/NewsSources";
 import {NewsNRK} from "./News/GetNewsNRK"
+import {Facebook} from "./FacebookAPI/facebook"
 
 var data = [
     {
@@ -23,24 +24,27 @@ var data = [
         subtitle: "",
         action: <NewsVGOgE24 kanal = {NewsSources.VG_Tech} />
     }, 
-   
-  
+    {
+      title: "",
+      subtitle:"",
+      action: <Facebook/>,
+      
+    }, 
+
+    {
+    title: "",
+    subtitle:"",
+    action: <Facebook/>,
+    
+    }, 
+ 
     {
         title: "",
         subtitle:"",
-        action: <Twitter/>,
+        action: <FacebookEventer/>,
         
     },
-    {
-        title: '',
-        subtitle: '',
-        action: <FacebookContainer/>
-    },
-    {
-        title: "",
-        subtitle: "",
-        action: <FacebookEventer/>
-    },
+    
   ]
 
 export default data;
