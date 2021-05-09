@@ -24,8 +24,10 @@ namespace allvis.Controllers.Data_Storage_Table
 
         private HandleAzureStorageTable()
         {
+
             var storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=allvisdatabase;AccountKey=bjmhQAtIq2Z+OBzZnNxEbnOctOATfwMD1aiYnEM2IjfX4D7McU5YyXc6RsTeWtVhhjosRStmh077tXzE3FK58w==;EndpointSuffix=core.windows.net";
             var tablename = "Allvi02";
+
 
             CloudStorageAccount storageAccount;
             storageAccount = CloudStorageAccount.Parse(storageConnectionString);
