@@ -1,10 +1,9 @@
-import { Twitter} from "./TwitterAPI/Twitter";
+import { Twitter} from "./API/TwitterAPI/Twitter";
 import {FacebookContainer, FacebookEventer} from "./content"
-import {Linkdin} from "../admin/Linkdin"
 import {NewsVGOgE24} from "./News/GetNewsVGogE24"
 import NewsSources from "./News/NewsSources";
 import {NewsNRK} from "./News/GetNewsNRK"
-import {Facebook} from "./FacebookAPI/facebook"
+import {Facebook} from "./API/FacebookAPI/facebook"
 
 var data = [
     {
@@ -13,6 +12,18 @@ var data = [
         action: <Twitter/>,
         
     },
+    {
+      title: "",
+      subtitle:"",
+      action: <Facebook/>,
+      
+  },
+  {
+    title: "",
+    subtitle:"",
+    action: <FacebookEventer/>,
+    
+},
     
   ]
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import ITwitterDto from './ITwitterDto';
-import styles from './Twitter.module.scss'
+import styles from '../../API/API.module.scss'
 import { AiFillTwitterCircle } from "react-icons/ai";
 import cx from "classnames"
 
@@ -27,7 +27,7 @@ export const Twitter = () => {
     <ol className={cx(styles.ol)}>
         {tweets.map(tweet => (
             
-            <div className={cx(styles.twitter)}>
+            <div className={cx(styles.APIbox)}>
                 <p>{tweet.text}</p>
                 <img src={tweet.medium}></img>
                 <h1><p><AiFillTwitterCircle />This post is from Twitter </p></h1>

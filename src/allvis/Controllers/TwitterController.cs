@@ -9,8 +9,6 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace allvis.Controllers
 {
     [Route("api/[controller]")]
@@ -18,24 +16,18 @@ namespace allvis.Controllers
     public class TwitterController : ControllerBase
     {
         private readonly HttpClient _client;
-
         private readonly string COMPANYID = "28198545";
-
         private  string _bearerToken = "AAAAAAAAAAAAAAAAAAAAAE0tMwEAAAAAI2QW%2FZmImgXvGvH%2BJRGS9pOyE%2FI%3DfX8cXrY5VgD9Ka68WZmogFCM2NWRSu7TwSl9IVLLGAAfw5Qyih";
-
         private int _amountOfTweets;
-
 
         public TwitterController(IHttpClientFactory clientFactory)
         {
             _client = clientFactory.CreateClient();
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _bearerToken);
 
-            _amountOfTweets = HandleAzureStorageTable.GetInstance.AmountOfPosts("1", "Sandnes").Result.AmountOfPostsTwitter;
+            _amountOfTweets = HandleAzureStorageTable.GetInstance.AmountOfPosts("1", "sandnes").Result.amountOfPostsTwitter;
         }
 
-
-        // GET: api/<TwitterAPI>
         [HttpGet]
         public async Task<List <TwitterDataDto>> Get()
         {

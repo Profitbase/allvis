@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace allvis.Controllers.Dtos
+﻿namespace allvis.Controllers.Dtos
 {
     public class FacebookAPIResponse
     {

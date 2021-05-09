@@ -1,9 +1,7 @@
 ﻿using allvis.Controllers.Data_Storage_Table;
 using allvis.Controllers.Dtos;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
@@ -15,25 +13,22 @@ namespace allvis.Controllers
     [ApiController]
     public class FacebookController : ControllerBase
     {
+
         private readonly HttpClient _client;
-
         private readonly string COMPANYID = "104301561786409";
-
         private string _bearerToken = "EAAFwlwGswr4BALvNeZBinGEP8arF4GYYWzz2xAjZChOeqWa8r8fZC1QI6OP9czSAJysrSPQepb5AipJRQ9bleLAJNUWZCS7YsEngGX2sJPCRKmaxZAWr4WBmdH6AdyJelqeN6dNqLBM6V0xHQnlehJ8gZCkJd6dfza1p4gZAgSVqgZDZD";
-
-        private int _amountOfPost = 2;
+        private int _amountOfPost;
 
 
         public FacebookController(IHttpClientFactory clientFactory)
         {
             _client = clientFactory.CreateClient();
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _bearerToken);
-
-            _amountOfPost = HandleAzureStorageTable.GetInstance.AmountOfPosts("1", "Sandnes").Result.AmountOfPostsFacebook;
+            _amountOfPost = HandleAzureStorageTable.GetInstance.AmountOfPosts("1", "sandnes").Result.amountOfPostsFacebook;
 
         }
 
-        // GET: api/<TwitterAPI>
+        
         [HttpGet]
         public async Task<List<FacebookDataDto>> Get()
         {

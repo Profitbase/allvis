@@ -1,8 +1,6 @@
-﻿using System.Data;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
+﻿using System.Threading.Tasks;
+using allvis.Controllers.Dtos;
 using Microsoft.Azure.Cosmos.Table;
-using Microsoft.Extensions.Hosting;
 using Microsoft.WindowsAzure.StorageClient;
 using CloudTableClient = Microsoft.Azure.Cosmos.Table.CloudTableClient;
 
@@ -26,22 +24,35 @@ namespace allvis.Controllers.Data_Storage_Table
 
         private HandleAzureStorageTable()
         {
-            var storageConnectionString = "";
-            var tablename = "InformationBoard";
+            var storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=allvisdatabase;AccountKey=bjmhQAtIq2Z+OBzZnNxEbnOctOATfwMD1aiYnEM2IjfX4D7McU5YyXc6RsTeWtVhhjosRStmh077tXzE3FK58w==;EndpointSuffix=core.windows.net";
+            var tablename = "Allvi02";
 
-            //Cretaing storage account for connectivity
             CloudStorageAccount storageAccount;
             storageAccount = CloudStorageAccount.Parse(storageConnectionString);
 
-            //creating cloud reference to the table
             CloudTableClient tableClient = storageAccount.CreateCloudTableClient(new TableClientConfiguration());
             CloudTable table = tableClient.GetTableReference(tablename);
-
             informationboard = table;
+
         }
 
+        public async Task UpdateData(AdminDataDto data)
+        {
+            UpdateTable azure = new UpdateTable("1", "sandnes")
+            {
+                amountOfPostsTwitter = data.AmountOfTweeets,
+                amountOfPostsFacebook = data.AmountOfFacebookPosts,
+                lunchMonday = data.LunchMonday,
+                lunchTuesday = data.LunchTuesday,
+                lunchWensday = data.LunchWednesday,
+                lunchThursday = data.LunchThursday,
+                lunchFriday = data.LunchFriday
+            };
 
-        public static async Task MergeUser(UpdateTable entity)
+            await MergeTable(informationboard, azure);
+        }
+
+        public static async Task MergeTable(CloudTable informationboard, UpdateTable entity)
         {
             try
             {
@@ -78,8 +89,8 @@ namespace allvis.Controllers.Data_Storage_Table
 
     public class GetFacebookAndTwitterEntity : TableEntity
     {
-        public int AmountOfPostsFacebook { get; set; }
-        public int AmountOfPostsTwitter { get; set; }
+        public int amountOfPostsFacebook { get; set; }
+        public int amountOfPostsTwitter { get; set; }
     }
 
     public class GetTheWeekLunch : TableEntity
@@ -94,8 +105,12 @@ namespace allvis.Controllers.Data_Storage_Table
 
     public class UpdateTable : TableEntity
     {
-        public double amountOfPostsFacebook { get; set; }
-        public double amountOfPostsTwitter { get; set; }
+        public UpdateTable(string partitionKey, string rowKey) : base(partitionKey, rowKey)
+        {
+        }
+
+        public int amountOfPostsFacebook { get; set; }
+        public int amountOfPostsTwitter { get; set; }
         public string lunchMonday { get; set; }
         public string lunchTuesday { get; set; }
         public string lunchWensday { get; set; }

@@ -15,10 +15,6 @@ namespace allvis.Controllers
         {
             private int _amountOfNeews = 1;
 
-
-
-
-            // GET: api/<TwitterAPI>
             [HttpGet]
             public async  Task<List<NewsVGOgE24DataDto>> Get(int source)
             {

@@ -1,13 +1,8 @@
-﻿using allvis.Controllers.Dtos;
+﻿using allvis.Controllers.Data_Storage_Table;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace allvis.Controllers
 {
@@ -15,26 +10,59 @@ namespace allvis.Controllers
     [ApiController]
     public class LunchController : ControllerBase
     {
-        private string lunchMonday = "Taco";
-        private string lunchTuesday = "Fisk";
-        private string lunchWensday = "pasta";
-        private string lunchThursday = "Pizza";
-        private string lunchFriday = "Kebab";
+        private string lunchMonday;
+        private string lunchTuesday;
+        private string lunchWensday;
+        private string lunchThursday;
+        private string lunchFriday;
 
+        public LunchController(IHttpClientFactory clientFactory)
+        {
+            
+            lunchMonday = HandleAzureStorageTable.GetInstance.GetLunch("1", "sandnes").Result.lunchMonday;
+            lunchTuesday = HandleAzureStorageTable.GetInstance.GetLunch("1", "sandnes").Result.lunchTuesday;
+            lunchWensday = HandleAzureStorageTable.GetInstance.GetLunch("1", "sandnes").Result.lunchWensday;
+            lunchThursday = HandleAzureStorageTable.GetInstance.GetLunch("1", "sandnes").Result.lunchThursday;
+            lunchFriday = HandleAzureStorageTable.GetInstance.GetLunch("1", "sandnes").Result.lunchFriday;
+        }
 
         [HttpGet]
-        public async Task<LunchDataDto> Get()
+        public async Task<String> Get()
         {
-            return new LunchDataDto()
+            DayOfWeek day = DateTime.Now.DayOfWeek;
+
+            return Todayslunch(day);
+        }
+
+        private string Todayslunch(DayOfWeek day)
+        {
+            string lunch;
+           
+            if (day == DayOfWeek.Monday)
             {
-               lunchMonday = lunchMonday,
-               lunchTuesday = lunchTuesday,
-               lunchWensday = lunchWensday,
-               lunchThursday = lunchThursday,
-               lunchFriday = lunchFriday
-            };
+                lunch = lunchMonday;
+            }
+            else if (day == DayOfWeek.Tuesday)
+            {
+                lunch = lunchTuesday;
+            }
+            else if (day == DayOfWeek.Wednesday)
+            {
+                lunch = lunchWensday;
+            }
+            else if (day == DayOfWeek.Thursday)
+            {
+                lunch = lunchThursday;
+            }
+            else if (day == DayOfWeek.Friday)
+            {
+                lunch = lunchFriday;
+            }
+            else
+            {
+                lunch = "Kantina er stengt";
+            }
+            return lunch;
         }
     }
-
-
 }

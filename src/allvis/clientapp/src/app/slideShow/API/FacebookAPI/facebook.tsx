@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import IFacebookDto  from './IFacebookDto';
 import { RiFacebookCircleFill } from "react-icons/ri";
+import styles from '../../API/API.module.scss'
 
 export const Facebook = () => {
     
@@ -8,13 +9,13 @@ export const Facebook = () => {
     const [posts, setPosts] = useState<IFacebookDto []>([])
     
     useEffect(() => {
-        getTweets()
+        getPosts()
         setInterval(() => {
             setTime(Date.now())
         }, 7200000 );
     }, []);
 
-    const getTweets = async () => {
+    const getPosts = async () => {
         const apiCall = await fetch('api/Facebook')
         const response = await apiCall.json();
         setPosts(response)
@@ -22,10 +23,10 @@ export const Facebook = () => {
     }
     
     return(
-    <ol>
+    <ol className={(styles.ol)}>
         {posts.map(post => (
             
-            <div >
+            <div className={(styles.APIbox)}>
                 <p>{post.message}</p>
                 {post.full_picture ? <img src={post.full_picture} alt='???' /> : null}
                 <h1><p><RiFacebookCircleFill />This post is from Facebook</p></h1>  
@@ -36,3 +37,7 @@ export const Facebook = () => {
     </ol>
     )
 }
+
+
+
+

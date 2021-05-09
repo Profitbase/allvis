@@ -1,13 +1,9 @@
 ﻿using allvis.Controllers.Dtos;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace allvis.Controllers
 {
@@ -16,16 +12,14 @@ namespace allvis.Controllers
     public class WeatherController : ControllerBase
     {
         private readonly HttpClient _client;
-
         private readonly string API_KEY = "9b8ce979413024c433f966e90356148d";
-
         private readonly string City = "Sandnes";
 
         public WeatherController(IHttpClientFactory clientFactory)
         {
             _client = clientFactory.CreateClient();
         }
-        // GET: api/<WeatherAPI>
+        
         [HttpGet]
         public async Task<WeatherDto> Get()
         {
@@ -87,5 +81,3 @@ namespace allvis.Controllers
 
 
 }
-
-
