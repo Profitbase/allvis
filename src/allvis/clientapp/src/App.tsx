@@ -8,7 +8,7 @@ import {AdminShell} from "./app/admin/AdminShell";
 function App() {
   return (
     <div className="App">
-       
+      
     <main>  
       {/* <AdminShell/>*/ }
        <Informationboard/>

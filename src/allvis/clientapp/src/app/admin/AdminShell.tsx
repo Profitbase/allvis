@@ -40,7 +40,7 @@ export const AdminShell = () => {
     }
     
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', padding: 30 }}>
+        <div style={{ display: 'flex', justifyContent: 'left', padding: 30 }}>
                 <div className={cx(styles.informationboard)}>
                 <img className={cx(styles.logo)} src={logo} alt="Logo" />
                     <h1 className={cx(styles.title)}>ALLVIS ADMIN SIDE</h1>

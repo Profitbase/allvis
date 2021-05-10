@@ -7,36 +7,38 @@
     border-width: 0.1rem;
     box-shadow: 0 0.04rem 0.1rem rgba(0, 0, 0, 0.15);
     margin: 0.5rem 3rem;
-    line-height: 2rem;
+    line-height: 1.5rem;
    
 
     p {
         font-size: 1rem;
         font-weight: normal;
         line-height: 1rem;
+        text-align: right;
     }
 
+ 
     img {
-        box-shadow: 0rem;
         width: 50%;
         height: 12rem;
         position: relative;
-        background-color: white;
-        object-fit: contain;
         margin-bottom: 1rem;
-        
     }
     h1 {
-        font-size: x-large;
+        font-size: 1.2rem;
         text-align: center;
     }
-  
+    h5{
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1rem;
+        
+    } 
     
-
 }
 
 .ol {
-	height: auto;
+	height:50rem;
 	width: 70%;
 	position: absolute;
 	top:2rem;

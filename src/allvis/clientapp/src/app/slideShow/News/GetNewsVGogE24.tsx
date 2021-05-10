@@ -33,8 +33,9 @@ export const NewsVGOgE24 = (props: INewsProps) => {
                 {news.map(n => (
                     <div className={cx(styles.StyleNews)}>
                         <h1>{n.title}</h1>
-                        <p>{n.description}</p>
+                        <h5>{n.description}</h5>
                         <img src= {n.image}></img>
+                        <p>This post is from VG and E24 </p>
                     </div>
                 ))}
             </ol>

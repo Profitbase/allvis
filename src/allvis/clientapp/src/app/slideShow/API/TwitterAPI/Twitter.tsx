@@ -22,7 +22,7 @@ export const Twitter = () => {
         setTweets(response)
         console.log(response)
     }
-    
+   
     return(
     <ol className={cx(styles.ol)}>
         {tweets.map(tweet => (
